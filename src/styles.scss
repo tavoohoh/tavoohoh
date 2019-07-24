@@ -1,1 +1,319 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'variables';
+@import '~compass-mixins/lib/compass/css3';
+
+@font-face {
+  font-family: 'Mono';
+  src: url('/assets/fonts/Roboto_Mono/RobotoMono-Regular.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/fonts/Montserrat/Montserrat-Regular.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/fonts/Montserrat/Montserrat-Bold.ttf');
+  font-weight: 700;
+}
+
+// resets
+* {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  outline: none!important;
+  box-sizing: border-box;
+  line-height: 1.4;
+}
+
+.mono, .mono * {
+  font-family: 'Mono', monospace;
+  line-height: 1.2;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+// general layout
+body {
+  @include fontNormal;
+  color: $dark;
+  background-color: $soft;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+p, .f_normal {
+  @include fontNormal;
+}
+
+small, .f_small, .f_small * {
+  @include fontSmall;
+  line-height: 1.1;
+}
+
+.f_medium, .f_medium * {
+  @include fontMedium;
+  line-height: 1.1;
+}
+
+h1, .f_h1 {
+  @include fontH1;
+}
+
+h2, .f_h2 {
+  @include fontH2;
+}
+
+h3, .f_h3 {
+  @include fontH3;
+}
+
+h4, .f_h4 {
+  @include fontH4;
+}
+
+h5, .f_h5 {
+  @include fontH5;
+}
+
+h6, .f_h6 {
+  @include fontH6;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.truncate {
+  width: 98%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* spacers dividers */
+.space {
+  display: block;
+}
+
+.s_bot_sm {
+  margin-bottom: $remSmall;
+    @media screen and (max-width: $mobile) {
+    margin-bottom: $remExtrasmall;
+  }
+}
+
+.s_bot_md {
+  margin-bottom: $remMedium;
+    @media screen and (max-width: $mobile) {
+    margin-bottom: $remSmall;
+  }
+}
+
+.s_bot_lg {
+  margin-bottom: $remLarge;
+    @media screen and (max-width: $mobile) {
+    margin-bottom: $remMedium;
+  }
+}
+
+.s_top_sm {
+  margin-top: $remSmall;
+    @media screen and (max-width: $mobile) {
+    margin-top: $remExtrasmall;
+  }
+}
+
+.s_top_md {
+  margin-top: $remMedium;
+    @media screen and (max-width: $mobile) {
+    margin-top: $remSmall;
+  }
+}
+
+.s_top_lg {
+  margin-top: $remLarge;
+    @media screen and (max-width: $mobile) {
+    margin-top: $remMedium;
+  }
+}
+
+/* fonts */
+.bold, .bold * {
+  font-weight: bold;
+}
+
+.capitalize, .capitalize * {
+  text-transform: capitalize;
+}
+
+.uppercase, .uppercase * {
+  text-transform: uppercase;
+}
+
+.white, .white * {
+  color: $white;
+}
+
+/* text box align */
+.align_center, .align_right, .align_left {
+  display: block;
+}
+
+.align_center {
+  text-align: center;
+}
+
+.align_right {
+  text-align: right;
+}
+
+.align_left {
+  text-align: left;
+}
+
+.hide {
+  display: none;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none; 
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+// link
+a, a > * {
+  color: $primary;
+}
+
+a:hover, a:focus, a:active {
+  color: $primary_hover;
+}
+
+/* Hide */
+@media screen and (max-width: $mobile) {
+  .hide_sm {
+    display: none;
+  }
+}
+
+/**
+ * button, input, select
+ **/
+
+.b, .i, .s {
+  @include clean_button;
+  @include fontNormal;
+  @include elements_trasition;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.b, .i, .s {
+  margin: .1rem;
+  min-width: 160px;
+  border-radius: $radiousNormal;
+  border-width: $borderNormal;
+  border-style: solid;
+  border-color: transparent;
+  background: $light;
+  padding: .4rem;
+  @media screen and (max-width: $mobile) {
+    padding: .3rem;
+  }
+}
+
+.b:hover, .b:focus, .b:active,
+.i:hover, .i:focus, .i:active,
+.s:hover, .s:focus, .s:active {
+  border-color: $primary_hover;
+}
+
+// button base
+.b {
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  border-color: $primary;
+  background: $primary;
+}
+
+.b:hover,
+.b:active,
+.b:focus {
+  background: $primary_hover;
+  border-color: $primary_hover;
+}
+
+.b.b_secondary {
+  background: $secondary;
+  border-color: $secondary;
+}
+
+.b.b_secondary:hover,
+.b.b_secondary:active,
+.b.b_secondary:focus {
+  background: $secondary_hover;
+  border-color: $secondary_hover;
+}
+
+// button outlined
+.b.b_outlined {
+  color: $primary;
+  background: transparent;
+}
+
+.b.b_secondary.b_outlined {
+  color: $secondary;
+}
+
+// button small
+.b.b_small {
+  @include fontSmall;
+  padding: .3rem;
+}
+
+// button large
+.b.b_large {
+  @include fontH6;
+  padding: .8rem;
+}
+
+// input and select 
+.i, .s {
+  border-style: none;
+}
+
+.s {
+  @include appearance(none);
+  text-indent: 0.01px;
+  text-overflow: '';
+  outline: none;
+
+  option {
+    outline: none;
+  }
+}

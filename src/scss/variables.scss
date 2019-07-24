@@ -1,0 +1,106 @@
+// colors
+$primary: #269945;
+$primary_hover: lighten($primary, 7%);
+$secondary: #f28123;
+$secondary_hover: lighten($secondary, 5%);
+$white: #fff;
+$light: #ece5f0;
+$soft: #eff2ef;
+$medium: #003b36;
+$dark: #012622;
+$gray: #6d6a75;
+$light_gray: #B3B3B3;
+$green: #19CC95;
+$red: #FF4949;
+$blue: rgb(73, 100, 255);
+$yellow: rgb(255, 213, 73);
+
+// layout
+$radiousNormal: 4px;
+$borderNormal: 2px;
+$remExtrasmall: 0.5rem;
+$remSmall: 1.5rem;
+$remMedium: 3rem;
+$remLarge: 5rem;
+
+// media screen
+$mobile: 756px;
+
+// fonts
+@mixin fontNormal {
+  font-size: 1rem;
+  @media screen and (max-width: $mobile) {
+    font-size: .9rem;
+  }
+}
+
+@mixin fontMedium {
+  font-size: .9rem;
+  @media screen and (max-width: $mobile) {
+    font-size: .8rem;
+  }
+}
+
+@mixin fontSmall {
+  font-size: .8rem;
+  @media screen and (max-width: $mobile) {
+    font-size: .7rem;
+  }
+}
+
+@mixin fontH1 {
+  font-size: 2.4rem;
+  @media screen and (max-width: $mobile) {
+    font-size: 2.2rem;
+  }
+}
+
+@mixin fontH2 {
+  font-size: 2.2rem;
+  @media screen and (max-width: $mobile) {
+    font-size: 2rem;
+  }
+}
+
+@mixin fontH3 {
+  font-size: 2rem;
+  @media screen and (max-width: $mobile) {
+    font-size: 1.8rem;
+  }
+}
+
+@mixin fontH4 {
+  font-size: 1.8rem;
+  @media screen and (max-width: $mobile) {
+    font-size: 1.6rem;
+  }
+}
+
+@mixin fontH5 {
+  font-size: 1.6rem;
+  @media screen and (max-width: $mobile) {
+    font-size: 1.4rem;
+  }
+}
+
+@mixin fontH6 {
+  font-size: 1.4rem;
+  @media screen and (max-width: $mobile) {
+    font-size: 1.2rem;
+  }
+}
+
+// button
+@mixin clean_button {
+  border: none;
+  box-shadow: none;
+  text-shadow: none;
+}
+@mixin elements_trasition {
+  transition: .2s ease-in-out;
+}
+
+/* Shadows */
+@mixin soft_shadow {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.1);
+}
