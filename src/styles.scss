@@ -41,8 +41,8 @@ button::-moz-focus-inner {
 // general layout
 body {
   @include fontNormal;
-  color: $dark;
-  background-color: $soft;
+  color: $white;
+  background-color: $black;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -239,7 +239,7 @@ a:hover, a:focus, a:active {
   border-width: $borderNormal;
   border-style: solid;
   border-color: transparent;
-  background: $light;
+  background: $white;
   padding: .4rem;
   @media screen and (max-width: $mobile) {
     padding: .3rem;

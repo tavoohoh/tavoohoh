@@ -7,7 +7,11 @@ import { SharedModule } from '../shared.module';
 
 // Components
 import { HomeComponent } from './home/home.component';
-import { ConsoleComponent } from '@app/_widgets';
+import {
+  ConsoleComponent,
+  MainHeaderComponent,
+  MainFooterComponent
+} from '@app/_widgets';
 
 const routes: Routes = [
   {
@@ -19,7 +23,9 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     HomeComponent,
-    ConsoleComponent
+    ConsoleComponent,
+    MainHeaderComponent,
+    MainFooterComponent
   ],
   imports: [
     RouterModule.forChild(routes),

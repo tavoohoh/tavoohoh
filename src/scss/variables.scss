@@ -1,19 +1,19 @@
 // colors
-$primary: #269945;
-$primary_hover: lighten($primary, 7%);
-$secondary: #f28123;
-$secondary_hover: lighten($secondary, 5%);
-$white: #fff;
-$light: #ece5f0;
-$soft: #eff2ef;
-$medium: #003b36;
-$dark: #012622;
-$gray: #6d6a75;
-$light_gray: #B3B3B3;
-$green: #19CC95;
-$red: #FF4949;
-$blue: rgb(73, 100, 255);
-$yellow: rgb(255, 213, 73);
+$white: #ffffff;
+$gray: #a1a1a1;
+$gray_dark: #101415;
+$black: #0d1112;
+$yellow: #ffd549;
+$blue: #3e6cdd;
+$blue_light: #7fdce8;
+$pink: #eb008b;
+$red: #ff4949;
+$green: #19cc95;
+
+$primary: $blue;
+$primary_hover: lighten($blue, 7%);
+$secondary: $pink;
+$secondary_hover: lighten($pink, 5%);
 
 // layout
 $radiousNormal: 4px;
