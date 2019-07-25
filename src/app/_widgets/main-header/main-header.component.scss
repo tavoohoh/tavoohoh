@@ -1,0 +1,54 @@
+@import 'variables';
+
+header {
+  .link {
+    @include fontSmall;
+    @include elements_trasition;
+
+    display: inline-block;
+    color: $blue_light;
+    text-decoration: none;
+    margin-right: 16px;
+    padding: 5px 8px;
+    background-color: transparent;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $gray_dark;
+      color: darken($color: $blue_light, $amount: 10);
+    }
+  }
+
+  .logo a {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    right: 32px;
+
+    path {
+      @include elements_trasition;
+    }
+
+    .circle {
+      fill: $blue;
+      &:hover {
+        fill: lighten($color: $blue, $amount: 5);
+      }
+    }
+
+    .square {
+      fill: $pink;
+      &:hover {
+        fill: lighten($color: $pink, $amount: 10);
+      }
+    }
+
+    .triangle {
+      fill: $blue_light;
+      &:hover {
+        fill: lighten($color: $blue_light, $amount: 15);
+      }
+    }
+  }
+}

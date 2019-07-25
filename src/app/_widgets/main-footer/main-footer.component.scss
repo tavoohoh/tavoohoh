@@ -1,0 +1,20 @@
+@import 'variables';
+
+footer {
+  text-align: center;
+  .link {
+    @include elements_trasition;
+
+    display: inline-block;
+    color: $blue_light;
+    text-decoration: none;
+    padding: 2px 12px;
+    background-color: transparent;
+    border-right: 1px solid darken($color: $blue_light, $amount: 10);
+    font-size: .7rem;
+
+    &:last-child {
+      border: none;
+    }
+  }
+}

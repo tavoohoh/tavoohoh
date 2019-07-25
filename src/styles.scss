@@ -206,12 +206,16 @@ button {
 
 // link
 a, a > * {
-  color: $primary;
+  color: $blue_light;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: darken($color: $blue_light, $amount: 10);
+  }
 }
 
-a:hover, a:focus, a:active {
-  color: $primary_hover;
-}
+
 
 /* Hide */
 @media screen and (max-width: $mobile) {
@@ -315,5 +319,21 @@ a:hover, a:focus, a:active {
 
   option {
     outline: none;
+  }
+}
+
+/* Layout */
+.main_page {
+  display: grid;
+  padding: 32px;
+  max-width: 784px;
+  margin: auto;
+  grid-template-columns: 1fr;
+  grid-template-rows: 32px auto 32px;
+  height: 100vh;
+  grid-gap: 16px;
+
+  * {
+    align-self: center;
   }
 }
