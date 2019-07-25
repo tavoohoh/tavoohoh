@@ -1,5 +1,43 @@
 @import 'variables';
 
 .home_body {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 16px;
 
+  .presentation {
+
+    .socialmedia {
+      text-align: right;
+      
+      .title {
+        font-size: .9rem;
+        color: $blue_light;
+      }
+
+      .icons {
+        margin-top: 8px;
+        a {
+          margin-right: 8px;
+          &:last-child {
+            margin: 0;
+          }
+
+          svg {
+            @include elements_trasition;
+            fill: $white;
+            width: 16px;
+            height: 16px;
+            &:hover {
+              fill: $blue_light;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  app-widget-console {
+
+  }
 }
