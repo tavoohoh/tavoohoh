@@ -19,12 +19,14 @@ $secondary_hover: lighten($pink, 5%);
 $radiousNormal: 4px;
 $borderNormal: 2px;
 $remExtrasmall: 0.5rem;
-$remSmall: 1.5rem;
-$remMedium: 3rem;
-$remLarge: 5rem;
+$remXmall: 8px;
+$remSmall: 16px;
+$remMedium: 32px;
+$remLarge: 64px;
 
 // media screen
 $mobile: 756px;
+$heightFrame: 230px;
 
 // fonts
 @mixin fontNormal {

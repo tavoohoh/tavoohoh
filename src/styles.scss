@@ -325,13 +325,13 @@ a, a > * {
 /* Layout */
 .main_page {
   display: grid;
-  padding: 32px;
+  padding: $remMedium;
   max-width: 784px;
   margin: auto;
   grid-template-columns: 1fr;
-  grid-template-rows: 32px auto 32px;
+  grid-template-rows: $remMedium auto $remMedium;
   height: 100vh;
-  grid-gap: 16px;
+  grid-gap: $remSmall;
 
   * {
     align-self: center;
