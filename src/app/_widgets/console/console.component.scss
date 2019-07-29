@@ -1,37 +1,33 @@
 @import 'variables';
 
+.success {
+  color: $green;
+}
+
+.info {
+  color: $blue_light;
+}
+
+.warning {
+  color: $yellow;
+}
+
+.danger {
+  color: $red;
+}
+
 .console {
   height: $heightFrame;
-  overflow-y: auto;
+  overflow-y: hidden;
   padding: $remSmall;
   background: $gray_dark;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-
-  p, span, input, * {
-    font-family: 'Mono', monospace;
-    font-size: .75rem;
-    margin: 0;
-    line-height: 2;
-  }
-
-  .success {
-    color: $green;
-  }
-
-  .info {
-    color: $blue_light;
-  }
-
-  .warning {
-    color: $yellow;
-  }
-
-  .danger {
-    color: $red;
-  }
   
   .user_input {
+    display: grid;
+    grid-template-columns: min-content auto;
     margin-bottom: $remSmall;
+
     span {
       color: $white;
     }

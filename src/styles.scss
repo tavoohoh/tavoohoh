@@ -215,8 +215,6 @@ a, a > * {
   }
 }
 
-
-
 /* Hide */
 @media screen and (max-width: $mobile) {
   .hide_sm {
@@ -336,4 +334,11 @@ a, a > * {
   * {
     align-self: center;
   }
+}
+
+.bsh_txt {
+  font-family: 'Mono', monospace;
+  font-size: .75rem;
+  margin: 0;
+  line-height: 2;
 }

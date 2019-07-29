@@ -5,6 +5,10 @@
   grid-template-columns: repeat(2, 1fr);
   grid-gap: $remMedium;
   
+  @media screen and (max-width: $mobile) {
+    grid-template-columns: auto;
+  }
+
   .presentation {
     display: grid;
     grid-template-columns: auto;

@@ -1,15 +1,17 @@
-<div class="console">
-  <p>
-    Hello and welcome to tavoohoh.
-  </p>
-  <p>
-    Type <span class="info">help</span> for a list of available commands.
-  </p>
-  <p>
-    Say <span class="info">hello</span> to <span class="info">Emma</span>.
-  </p>
-  <div class="user_input">
-    <span>tavoohoh:</span>
-    <input autofocus type="text"/>
+<div class="console" #bash [scrollTop]="bash.scrollHeight" (click)="focusUserInput()">
+  <div #bashContent>
+    <p class="bsh_txt">
+      Hello and welcome to tavoohoh.
+    </p>
+    <p class="bsh_txt">
+      Type <span class="info">help</span> for a list of available commands.
+    </p>
+    <p class="bsh_txt">
+      Say <span class="info">hello</span> to <span class="info">Emma</span>.
+    </p>
   </div>
+  <form class="user_input" (submit)="onCheckUserInput(input);">
+    <span class="bsh_txt">tavoohoh:</span>
+    <input #bInput class="bsh_txt" [(ngModel)]="userInput" [appAutofocus]="true" type="text" [ngModelOptions]="ngModelOptions"/>
+  </form>
 </div>

@@ -6,10 +6,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // External dependencies
 import { TranslateModule } from '@ngx-translate/core';
 
+// Directives
+import { AutofocusDirective } from '@app/_directives';
+
 
 @NgModule({
   declarations: [
-
+    AutofocusDirective,
   ],
   imports: [
     CommonModule,
@@ -22,6 +25,7 @@ import { TranslateModule } from '@ngx-translate/core';
     TranslateModule,
     FormsModule,
     ReactiveFormsModule,
+    AutofocusDirective
   ]
 })
 export class SharedModule { }
