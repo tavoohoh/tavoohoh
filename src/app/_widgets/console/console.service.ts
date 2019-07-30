@@ -7,6 +7,7 @@ import { map, filter, debounceTime, tap, switchAll } from 'rxjs/operators';
 export class ConsoleService implements OnDestroy {
   public command: string;
   public bash: ElementRef;
+  public emma = false;
   private subscription: Subscription;
 
   constructor(private router: Router) { }
@@ -14,6 +15,10 @@ export class ConsoleService implements OnDestroy {
   public async readConsole(bash: ElementRef, command: string) {
     this.command = command;
     this.bash = bash;
+
+    if (this.emma) {
+      return this.talkCommand();
+    }
 
     await this.emmaCheck();
 
@@ -58,8 +63,7 @@ export class ConsoleService implements OnDestroy {
         break;
 
       case 'hi':
-        console.log('What\'s up Emma?');
-        // talkCommand(command);
+        this.talkCommand();
         break;
 
       default:
@@ -88,25 +92,12 @@ export class ConsoleService implements OnDestroy {
   }
 
   /**
-   * Check if input is a know command
-   */
-  private line(i: string, c: string) {
-    return i.includes(c);
-  }
-
-  /**
    * Check if bash is attemping to talk to Emma
    */
   private emmaCheck() {
     const command = this.command;
 
-    if (
-      this.line(command.toLowerCase(), 'emma') ||
-      this.line(command.toLowerCase(), 'hello') ||
-      this.line(command.toLowerCase(), 'hey') ||
-      (this.line(command.toLowerCase(), 'hi') && command.toLowerCase().length === 2) ||
-      this.line(command.toLowerCase(), 'whats up')
-    ) {
+    if (/(hello |hi |hey |whats up |what's up |hola )/.test(command)) {
       this.command = 'hi';
     }
   }
@@ -321,7 +312,7 @@ export class ConsoleService implements OnDestroy {
             }
           }, 4000);
 
-        // To cancel
+          // To cancel
         } else if (keyCode === 110 || keyCode === 78) {
           this.write(`
             <p class="bsh_txt">
@@ -335,7 +326,7 @@ export class ConsoleService implements OnDestroy {
           }, 500);
 
           this.ngOnDestroy();
-        // If option is invalid
+          // If option is invalid
         } else {
           this.write(`
             <p class="bsh_txt">
@@ -346,6 +337,27 @@ export class ConsoleService implements OnDestroy {
           `);
         }
       });
+
+  }
+
+  /**
+   * Talk with Emma
+   */
+  private talkCommand() {
+    this.emma = true;
+    const command = this.command.toLowerCase();
+    const scriptType = null;
+
+    if (/(hello |hi |hey |whats up |what's up |hola )/.test(command)) {
+      console.log('hello');
+    } else if (/(bye |adios |see you later |chao )/.test(command)) {
+      console.log('bye');
+    } else if (/(help |sos )/.test(command)) {
+      console.log('help');
+    } else {
+      console.log('nope');
+
+    }
 
   }
 
