@@ -1,10 +1,13 @@
-import { Injectable, ElementRef } from '@angular/core';
+import { Injectable, ElementRef, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
+import { Subscription, Observable, fromEvent } from 'rxjs';
+import { map, filter, debounceTime, tap, switchAll } from 'rxjs/operators';
 
 @Injectable({ providedIn: 'root' })
-export class ConsoleService {
+export class ConsoleService implements OnDestroy {
   public command: string;
   public bash: ElementRef;
+  private subscription: Subscription;
 
   constructor(private router: Router) { }
 
@@ -51,8 +54,7 @@ export class ConsoleService {
         break;
 
       case 'rm -rf /*':
-        console.log('reset');
-        // resetCommand();
+        this.resetCommand();
         break;
 
       case 'hi':
@@ -254,4 +256,101 @@ export class ConsoleService {
     }
   }
 
+  /**
+   * Reset the website
+   */
+  private resetCommand() {
+    this.write(`
+      <p class="bsh_txt">
+        <span class="danger">
+          Are you sure about this?
+        </span>
+      </p>
+      <p class="bsh_txt">
+        Continue (Y/N)?
+      </p>
+    `);
+
+    const input = this.bash.nativeElement.nextSibling;
+    input.style.display = 'none';
+
+    this.subscription = fromEvent(document, 'keypress')
+      .subscribe((e: KeyboardEvent) => {
+        const keyCode = e.charCode;
+
+        // To destroy the website
+        if (keyCode === 121 || keyCode === 89) {
+          this.ngOnDestroy();
+          const body = this.bash.nativeElement.offsetParent;
+
+          setTimeout(() => {
+            this.write(`
+              <p class="bsh_txt">
+                <span class="danger">
+                  Destroying the DOM...
+                </span>
+              </p>
+            `);
+          }, 500);
+
+          setTimeout(() => {
+            body.style.cursor = 'none';
+            body.style.height = '100vh';
+            body.style.transition = '1s';
+            this.write(`
+              <p class="bsh_txt">
+                <span class="danger">
+                  Please wait...
+                </span>
+              </p>
+            `);
+          }, 1500);
+
+          setTimeout(() => {
+            this.write(`
+              <p class="bsh_txt">
+                Good bye!
+              </p>
+            `);
+          }, 3000);
+
+          setTimeout(() => {
+            body.style.backgroundColor = '#ffffff';
+            while (body.firstChild) {
+              body.removeChild(body.firstChild);
+            }
+          }, 4000);
+
+        // To cancel
+        } else if (keyCode === 110 || keyCode === 78) {
+          this.write(`
+            <p class="bsh_txt">
+              <span class="warning">
+                Canceling...
+              </span>
+            </p>
+          `);
+          setTimeout(() => {
+            input.style.display = 'grid';
+          }, 500);
+
+          this.ngOnDestroy();
+        // If option is invalid
+        } else {
+          this.write(`
+            <p class="bsh_txt">
+              To continue please press:<br>
+              "Y" (continue), or "N" (cancel)
+              <br><br>
+            </p>
+          `);
+        }
+      });
+
+  }
+
+  ngOnDestroy() {
+    // remove listener
+    this.subscription.unsubscribe();
+  }
 }

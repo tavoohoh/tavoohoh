@@ -38,11 +38,6 @@ export class ConsoleComponent implements OnInit {
       this.bashContent,
       this.userInput
     );
-
-    // this.bashContent.nativeElement.insertAdjacentHTML(
-    //   'beforeend',
-    //   `<p class="bsh_txt">${this.userInput}</p>`
-    // );
     this.userInput = '';
   }
 
