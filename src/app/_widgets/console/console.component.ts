@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { ConsoleService } from './console.service';
 
 @Component({
   selector: 'app-widget-console',
@@ -25,16 +26,23 @@ export class ConsoleComponent implements OnInit {
     }
   ) bInput: ElementRef;
 
-  constructor() { }
+  constructor(
+    private consoleService: ConsoleService
+  ) { }
 
   ngOnInit() {
   }
 
-  onCheckUserInput(el: HTMLElement) {
-    this.bashContent.nativeElement.insertAdjacentHTML(
-      'beforeend',
-      `<p class="bsh_txt">${this.userInput}</p>`
+  read() {
+    this.consoleService.readConsole(
+      this.bashContent,
+      this.userInput
     );
+
+    // this.bashContent.nativeElement.insertAdjacentHTML(
+    //   'beforeend',
+    //   `<p class="bsh_txt">${this.userInput}</p>`
+    // );
     this.userInput = '';
   }
 

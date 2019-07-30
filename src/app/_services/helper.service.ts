@@ -62,5 +62,4 @@ export class HelperService {
   returnUrl(def: string = '/') {
     return this.route.snapshot.queryParams.returnUrl || def;
   }
-
 }

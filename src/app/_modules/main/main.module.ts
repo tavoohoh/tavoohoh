@@ -18,6 +18,18 @@ const routes: Routes = [
     path: '',
     component: HomeComponent
   },
+  {
+    path: 'portfolio',
+    component: HomeComponent
+  },
+  {
+    path: 'about-me',
+    component: HomeComponent
+  },
+  {
+    path: 'contact',
+    component: HomeComponent
+  },
 ];
 
 @NgModule({

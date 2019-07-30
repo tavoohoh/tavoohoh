@@ -21,7 +21,6 @@
 
 // resets
 * {
-  font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
   outline: none!important;
@@ -41,6 +40,7 @@ button::-moz-focus-inner {
 // general layout
 body {
   @include fontNormal;
+  font-family: 'Montserrat', sans-serif;
   color: $white;
   background-color: $black;
 }
@@ -341,4 +341,28 @@ a, a > * {
   font-size: .75rem;
   margin: 0;
   line-height: 2;
+
+  .success {
+    color: $green;
+  }
+  
+  .info {
+    color: $blue_light;
+  }
+
+  .primary {
+    color: $blue;
+  }
+
+  .muted {
+    color: $gray;
+  }
+  
+  .warning {
+    color: $yellow;
+  }
+  
+  .danger {
+    color: $red;
+  }
 }

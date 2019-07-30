@@ -10,7 +10,7 @@
       Say <span class="info">hello</span> to <span class="info">Emma</span>.
     </p>
   </div>
-  <form class="user_input" (submit)="onCheckUserInput(input);">
+  <form class="user_input" (submit)="read();">
     <span class="bsh_txt">tavoohoh:</span>
     <input #bInput class="bsh_txt" [(ngModel)]="userInput" [appAutofocus]="true" type="text" [ngModelOptions]="ngModelOptions"/>
   </form>
