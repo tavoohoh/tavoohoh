@@ -197,8 +197,6 @@ export class ConsoleService implements OnDestroy {
         <span class="info">portfolio</span>
         &nbsp;&nbsp;
         <span class="info">about me</span>
-        &nbsp;&nbsp;
-        <span class="info">contact</span>
       </p>
     `);
   }
@@ -215,7 +213,7 @@ export class ConsoleService implements OnDestroy {
         break;
 
       case 'portfolio':
-        this.nav('/portfolio');
+        this.nav('/files/Gustavo-Santamaria-CV-Codefolio-2019.pdf');
         break;
 
       case 'about me':
