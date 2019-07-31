@@ -1,0 +1,59 @@
+@import 'variables';
+
+
+.aboutme_body {
+  $width: 200px;
+  display: grid;
+  grid-template-columns: $width auto;
+  grid-gap: $remMedium;
+
+  .photo {
+    align-self: start;
+    height: $width;
+    width: $width;
+    background-image: url('/assets/images/gustavo-2.jpg');
+    background-position: -96px -25px;
+    background-size: 393px;
+    background-repeat: no-repeat;
+  }
+
+  h1 {
+    @include fontH4;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: $remXmall;
+  }
+
+  h3 {
+    @include fontMedium;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-bottom: $remMedium;
+    color: $gray;
+  }
+
+  p {
+    @include fontMedium;
+    line-height: 1.7;
+    text-align: justify;
+  }
+
+  @media screen and (max-width: $mobile) {
+    $width: 180px;
+    grid-template-columns: auto;
+
+    h1, h3 {
+      text-align: center;
+    }
+    
+    .photo {
+      height: $width;
+      width: $width;
+      margin: 0 auto;
+      border-radius: 50%;
+      background-position: -80px -23px;
+      background-size: 360px;
+    }
+  }
+}

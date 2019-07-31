@@ -12,6 +12,8 @@ import {
   MainHeaderComponent,
   MainFooterComponent
 } from '@app/_widgets';
+import { AboutMeComponent } from './about-me/about-me.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
 
 const routes: Routes = [
   {
@@ -20,11 +22,11 @@ const routes: Routes = [
   },
   {
     path: 'portfolio',
-    component: HomeComponent
+    component: PortfolioComponent
   },
   {
     path: 'about-me',
-    component: HomeComponent
+    component: AboutMeComponent
   },
   {
     path: 'contact',
@@ -34,10 +36,12 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    HomeComponent,
-    ConsoleComponent,
     MainHeaderComponent,
-    MainFooterComponent
+    MainFooterComponent,
+    ConsoleComponent,
+    HomeComponent,
+    AboutMeComponent,
+    PortfolioComponent
   ],
   imports: [
     RouterModule.forChild(routes),
