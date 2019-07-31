@@ -1,7 +1,6 @@
 import { Injectable, ElementRef, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
-import { Subscription, Observable, fromEvent } from 'rxjs';
-import { map, filter, debounceTime, tap, switchAll } from 'rxjs/operators';
+import { Subscription, fromEvent } from 'rxjs';
 
 import {
   greatings,
@@ -109,7 +108,7 @@ export class ConsoleService implements OnDestroy {
   private emmaCheck() {
     const command = this.command;
 
-    if (/(hello |hi |hey |whats up |what's up |hola )/.test(command)) {
+    if (/(hello|hi|hi |hey|whats up|what's up|hola)/.test(command)) {
       this.command = 'hi';
     }
   }

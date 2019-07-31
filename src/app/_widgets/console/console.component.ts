@@ -1,16 +1,19 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChild, ElementRef } from '@angular/core';
 import { ConsoleService } from './console.service';
+import { Subscription, fromEvent } from 'rxjs';
+
 
 @Component({
   selector: 'app-widget-console',
   templateUrl: './console.component.html',
   styleUrls: ['./console.component.scss']
 })
-export class ConsoleComponent implements OnInit {
+export class ConsoleComponent implements OnInit, OnDestroy {
   public userInput: string;
   public ngModelOptions = {
     standalone: true
   };
+  private subscription: Subscription;
 
   @ViewChild(
     'bashContent',
@@ -31,6 +34,20 @@ export class ConsoleComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.subscription = fromEvent(document, 'keydown')
+      .subscribe((e: KeyboardEvent) => {
+        const keyCode = e.keyCode;
+
+        if (keyCode === 9) {
+          e.returnValue = false;
+          e.preventDefault();
+        }
+      });
+  }
+
+  ngOnDestroy() {
+    // remove listener
+    this.subscription.unsubscribe();
   }
 
   read() {
