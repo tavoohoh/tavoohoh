@@ -3,6 +3,18 @@ import { Router } from '@angular/router';
 import { Subscription, Observable, fromEvent } from 'rxjs';
 import { map, filter, debounceTime, tap, switchAll } from 'rxjs/operators';
 
+import {
+  greatings,
+  emma,
+  greaTingsResponse,
+  gustavo,
+  leave,
+  salutation,
+  website,
+  defaults,
+  meaningOfLife
+} from './answers';
+
 @Injectable({ providedIn: 'root' })
 export class ConsoleService implements OnDestroy {
   public command: string;
@@ -346,19 +358,51 @@ export class ConsoleService implements OnDestroy {
   private talkCommand() {
     this.emma = true;
     const command = this.command.toLowerCase();
-    const scriptType = null;
 
-    if (/(hello |hi |hey |whats up |what's up |hola )/.test(command)) {
-      console.log('hello');
-    } else if (/(bye |adios |see you later |chao )/.test(command)) {
-      console.log('bye');
-    } else if (/(help |sos )/.test(command)) {
-      console.log('help');
-    } else {
-      console.log('nope');
+    function setResponse(response: string[]) {
+      const randomString = Math.floor(
+        Math.random() * response.length
+      );
 
+      return `<p class="bsh_txt"><span class="muted"><br>${response[randomString]}</span></p>`;
     }
 
+    if (emma.regex.test(command)) {
+      console.log('emma');
+      this.write(setResponse(emma.options));
+
+    } else if (greatings.regex.test(command)) {
+      console.log('greatings');
+      this.write(setResponse(greatings.options));
+
+    } else if (greaTingsResponse.regex.test(command)) {
+      console.log('greatings response');
+      this.write(setResponse(greaTingsResponse.options));
+
+    } else if (gustavo.regex.test(command)) {
+      console.log('gustavo');
+      this.write(setResponse(gustavo.options));
+
+    } else if (leave.regex.test(command)) {
+      console.log('leave');
+      this.write(setResponse(leave.options));
+
+    } else if (salutation.regex.test(command)) {
+      console.log('salutation');
+      this.write(setResponse(salutation.options));
+
+    } else if (website.regex.test(command)) {
+      console.log('website');
+      this.write(setResponse(website.options));
+
+    } else if (meaningOfLife.regex.test(command)) {
+      console.log('meaning of life');
+      this.write(setResponse(meaningOfLife.options));
+
+    } else {
+      console.log('default');
+      this.write(setResponse(defaults.options));
+    }
   }
 
   ngOnDestroy() {
