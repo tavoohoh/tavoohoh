@@ -1,8 +1,9 @@
 export const defaults = {
   regex: /()/,
   options: [
-    'Gustavo is my creator...',
+    'Sorry what was that?',
     'Sorry I do not know what that means. Gustavo is working on my AI.',
-    'I was developed to answer to anything, but I\'m not too talkative, my AI is more like a chatbot...',
+    'You humans are very interesting',
+    'You say very funny things'
   ]
 };
