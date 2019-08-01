@@ -334,6 +334,10 @@ a, a > * {
   * {
     align-self: center;
   }
+
+  @media screen and (max-width: $mobile) {
+    padding: $remSmall;
+  }
 }
 
 .bsh_txt {

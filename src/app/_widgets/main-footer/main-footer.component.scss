@@ -13,6 +13,12 @@ footer {
     border-right: 1px solid darken($color: $blue_light, $amount: 10);
     font-size: .7rem;
 
+    @media screen and (max-width: $mobile) {
+      font-size: .6rem;
+      padding: 2px 4px;
+      border: none;
+    }
+
     &:last-child {
       border: none;
     }

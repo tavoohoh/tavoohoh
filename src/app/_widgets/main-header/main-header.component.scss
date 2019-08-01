@@ -12,6 +12,11 @@ header {
     padding: 5px 8px;
     background-color: transparent;
 
+    @media screen and (max-width: $mobile) {
+      padding: 2px 3px;
+      margin-right: 6px;
+    }
+
     &:hover,
     &:focus,
     &:active {
@@ -24,7 +29,13 @@ header {
     position: absolute;
     width: 32px;
     height: 32px;
-    right: 32px;
+    right: $remMedium;
+
+    @media screen and (max-width: $mobile) {
+      width: 24px;
+      height: 24px;
+      right: $remSmall;
+    }
 
     path {
       @include elements_trasition;

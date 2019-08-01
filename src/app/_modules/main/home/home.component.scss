@@ -16,6 +16,10 @@
     height: $heightFrame;
     padding: $remSmall;
 
+    @media screen and (max-width: 330px) {
+      padding: 0;
+    }
+
     .description {
       align-self: start;
 
@@ -26,6 +30,9 @@
         line-height: 1.2;
         margin-bottom: $remXmall;
         letter-spacing: .15em;
+        @media screen and (max-width: 330px) {
+          font-size: 1.3rem;
+        }
       }
   
       p {
@@ -33,6 +40,9 @@
         line-height: 1.4;
         font-weight: normal;
         text-transform: uppercase;
+        @media screen and (max-width: 330px) {
+          font-size: .8rem;
+        }
       }
     }
 
@@ -43,6 +53,9 @@
       .title {
         font-size: .9rem;
         color: $blue_light;
+        @media screen and (max-width: 330px) {
+          font-size: .8rem;
+        }
       }
 
       .icons {
@@ -65,9 +78,5 @@
         }
       }
     }
-  }
-
-  app-widget-console {
-
   }
 }
