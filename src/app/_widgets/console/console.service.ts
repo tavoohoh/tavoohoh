@@ -77,6 +77,10 @@ export class ConsoleService implements OnDestroy {
         this.talkCommand();
         break;
 
+      case 'ssh eo':
+        this.nav('/espacio');
+        break;
+
       default:
         this.write(`
           <p class="bsh_txt">

@@ -1,0 +1,9 @@
+<app-espacio-navigation></app-espacio-navigation>
+
+<section class="eo_login">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <input type="text" formControlName="username"/>
+    <input type="password" formControlName="password"/>
+    <button [disabled]="loading">&nbsp;</button>
+  </form>
+</section>

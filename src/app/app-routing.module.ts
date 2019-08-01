@@ -7,6 +7,10 @@ const routes: Routes = [
     path: '',
     loadChildren: './_modules/main/main.module#MainModule'
   },
+  {
+    path: 'espacio',
+    loadChildren: './_modules/espacio/espacio.module#EspacioModule'
+  },
 
   { path: '**', redirectTo: '' }
 ];

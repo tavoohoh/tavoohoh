@@ -1,0 +1,26 @@
+@import 'variables';
+
+.eo_login {
+  display: grid;
+  grid-template-columns: auto;
+  height: 100vh;
+
+  form {
+    width: 180px;
+    margin: auto;
+    align-self: center;
+    input, button {
+      font-family: 'mono', monospace;
+      font-size: .7rem;
+      text-align: center;
+      letter-spacing: 2px;
+      display: block;
+      color: $gray;
+      padding: 10px 16px;
+      border: none;
+      background: $gray_dark;
+      margin-bottom: 16px;
+      width: 100%;
+    }
+  }
+}
