@@ -1,0 +1,76 @@
+@import 'variables';
+
+.portfolio_body {
+  .portfolio {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: $remSmall;
+    height: 400px;
+    padding: $remMedium;
+    margin-bottom: $remMedium;
+
+    .header {
+      grid-column: 1 / 3;
+      .category, .title, .date {
+        text-align: center;
+        line-height: 1;
+      }
+
+      .category, .title {
+        font-weight: bold;
+      }
+
+      .title {
+        font-size: 2.2rem;
+        text-transform: uppercase;
+        margin: 4px 0;
+      }
+
+      .date {
+        display: block;
+        font-size: .8rem;
+      }
+    }
+
+    .image {
+      grid-column: 1;
+
+    }
+
+    .body {
+      grid-column: 2;
+      align-self: start;
+
+      h4 {
+        font-size: 1.5rem;
+        font-weight: normal;
+      }
+
+      p {
+        margin: 24px;
+        font-size: .8rem;
+      }
+
+      .text_box {
+        font-size: .7rem;
+        padding: $remSmall $remSmall $remMedium;
+        border: 1px solid $white;
+      }
+
+      .platform {
+        position: relative;
+        top: -20px;
+        width: 200px;
+        margin: 0 auto;
+        padding: $remSmall;
+        background: $white;
+        font-size: .7rem;
+        text-align: center;
+
+        a {
+          color: $black;
+        }
+      }
+    }
+  }
+}

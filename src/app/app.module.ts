@@ -11,6 +11,9 @@ import {
 import { TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
+// https://github.com/t-ho/ngx-ui-loader/wiki/Getting-started
+import { NgxUiLoaderModule } from 'ngx-ui-loader';
+
 // Modules
 import { AppRoutingModule } from '@app/app-routing.module';
 import { SharedModule } from './_modules/shared.module';
@@ -38,6 +41,7 @@ import {
     AppRoutingModule,
     HttpClientModule,
     TranslateModule.forRoot(),
+    NgxUiLoaderModule,
     SharedModule,
   ],
   providers: [
