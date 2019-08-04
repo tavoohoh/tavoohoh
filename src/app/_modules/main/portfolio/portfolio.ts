@@ -1,14 +1,12 @@
 import { Project } from '@app/_models';
 
-export const projects: Project[] = [
+export const portfolio: Project[] = [
   {
     title: 'Centro Cultural Chacao',
     category: 'Culture and Arts',
     layout: 'cover',
     color: [
-      '#000000',
-      '#ffffff',
-      '#2680c6'
+      '#ffffff'
     ],
     images: [
       '/assets/portfolio/2016-01-Centro-Cultural-Chacao/cover_1.jpg'
@@ -27,8 +25,6 @@ export const projects: Project[] = [
     category: 'Music',
     layout: 'contain',
     color: [
-      '#000000',
-      '#ffffff',
       '#646f6f'
     ],
     images: [
@@ -48,9 +44,7 @@ export const projects: Project[] = [
     category: 'Administration',
     layout: 'two_top',
     color: [
-      '#000000',
-      '#000000',
-      '#76d8e1'
+      '#646f6f'
     ],
     images: [
       '/assets/portfolio/2017-03-Skat/cover_1.jpg',
@@ -67,8 +61,6 @@ export const projects: Project[] = [
     category: 'Social Network',
     layout: 'two_side',
     color: [
-      '#000000',
-      '#ffffff',
       '#2680c6'
     ],
     images: [
@@ -81,7 +73,7 @@ export const projects: Project[] = [
     body: `Social platform that allows artists to show their portfolio through multimedia content,
     apply for castings and participate in special events.`,
     link: [
-      'Available in the App Storeand Play Store'
+      'Available in the App Store and Play Store'
     ]
   },
   {
@@ -89,8 +81,6 @@ export const projects: Project[] = [
     category: 'Payment gateway',
     layout: 'two_top',
     color: [
-      '#000000',
-      '#000000',
       '#d6e2e1'
     ],
     images: [
@@ -112,9 +102,7 @@ export const projects: Project[] = [
     category: 'Administration',
     layout: 'cover',
     color: [
-      '#000000',
-      '#ffffff',
-      '#2680c6'
+      '#cccccc'
     ],
     images: [
       '/assets/portfolio/2017-10-Steam-Energy/cover_1.jpg'
@@ -131,8 +119,6 @@ export const projects: Project[] = [
     category: 'Photography',
     layout: 'two_top_over',
     color: [
-      '#ffffff',
-      '#ffffff',
       '#646f6f'
     ],
     images: [
@@ -153,8 +139,6 @@ export const projects: Project[] = [
     category: 'Software factory',
     layout: 'two_top_over',
     color: [
-      '#000000',
-      '#ffffff',
       '#2680c6'
     ],
     images: [
@@ -176,9 +160,7 @@ export const projects: Project[] = [
     category: 'Hotel administration',
     layout: 'two_top',
     color: [
-      '#ffffff',
-      '#ffffff',
-      '#3a3c42'
+      '#646f6f'
     ],
     images: [
       '/assets/portfolio/2018-06-Exeter/cover_1.jpg',
@@ -195,8 +177,6 @@ export const projects: Project[] = [
     category: 'Food',
     layout: 'contain',
     color: [
-      '#000000',
-      '#000000',
       '#d6e2e1'
     ],
     images: [
@@ -216,9 +196,7 @@ export const projects: Project[] = [
     category: 'Framework',
     layout: 'two_top',
     color: [
-      '#ffffff',
-      '#ffffff',
-      '#2680c6'
+      '#ffffff'
     ],
     images: [
       '/assets/portfolio/2018-09-Gridout/cover_1.png',
@@ -238,8 +216,6 @@ export const projects: Project[] = [
     category: 'Music',
     layout: 'contain',
     color: [
-      '#000000',
-      '#000000',
       '#d6e2e1'
     ],
     images: [
@@ -259,8 +235,6 @@ export const projects: Project[] = [
     category: 'Music',
     layout: 'contain',
     color: [
-      '#000000',
-      '#000000',
       '#646f6f'
     ],
     images: [
@@ -280,9 +254,7 @@ export const projects: Project[] = [
     category: 'Web administration',
     layout: 'contain',
     color: [
-      '#000000',
-      '#ffffff',
-      '#2680c6'
+      '#ffffff'
     ],
     images: [
       '/assets/portfolio/2018-12-Espacio/cover_1.png'
@@ -301,8 +273,6 @@ export const projects: Project[] = [
     category: 'Financial Administration',
     layout: 'contain',
     color: [
-      '#ffffff',
-      '#000000',
       '#8da5a8'
     ],
     images: [
@@ -319,8 +289,6 @@ export const projects: Project[] = [
     category: 'E-Commerce',
     layout: 'contain',
     color: [
-      '#ffffff',
-      '#ffffff',
       '#3a3c42'
     ],
     images: [

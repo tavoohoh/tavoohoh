@@ -6,7 +6,7 @@ export class Project {
     public title: string,
     public category: string,
     public layout: string,
-    public color: string[], // [0]: font, [1]: title, [2]: backgound
+    public color: string[], // [0]: backgound, [1]: title, [2]: font
     public images: string[], // [0]: first image, [2]: second image
     public date: Date,
     public framework: string,

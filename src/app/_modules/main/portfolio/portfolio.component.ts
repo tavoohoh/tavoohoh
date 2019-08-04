@@ -1,9 +1,10 @@
 import { Component, OnInit, HostListener, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { MainService } from '@app/_services';
 import { Project } from '@app/_models';
 
 import { NgxUiLoaderService } from 'ngx-ui-loader';
+import { portfolio } from './portfolio';
+
 
 @Component({
   selector: 'app-portfolio',
@@ -15,8 +16,7 @@ export class PortfolioComponent implements OnInit, OnDestroy {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private ngxService: NgxUiLoaderService,
-    private mainService: MainService
+    private ngxService: NgxUiLoaderService
   ) { }
 
   /**
@@ -34,11 +34,8 @@ export class PortfolioComponent implements OnInit, OnDestroy {
    */
   async getPorfolio() {
     this.ngxService.start();
-    this.portfolio = await this.mainService.getPortfolio();
+    this.portfolio = await portfolio;
     this.ngxService.stop();
-
-    console.log(this.portfolio);
-
   }
 
 }

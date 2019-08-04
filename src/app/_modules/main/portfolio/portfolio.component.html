@@ -5,9 +5,9 @@
   <!-- BODY -->
   <section class="portfolio_body">
     <div *ngFor="let project of portfolio">
-      <div class="portfolio" [style.background-color]="project.color[2]">
+      <div class="portfolio">
         <!-- title: title, categoria -->
-        <div class="header" [style.color]="project.color[1]">
+        <div class="header">
           <h6 class="category">
             {{ project.category }}
           </h6>
@@ -20,7 +20,7 @@
         </div>
   
         <!-- image -->
-        <div class="image">
+        <div class="image" [style.background-color]="project?.color[0]">
           <div [class]="project.layout">
             <span class="first" [style.background-image]="'url('+ project.images[0] +')'"></span>
             <span class="last" *ngIf="project.images[1]" [style.background-image]="'url('+ project.images[1] +')'"></span>
@@ -28,7 +28,7 @@
         </div>
   
         <!-- information: -->
-        <div class="body" [style.color]="project.color[0]">
+        <div class="body">
           <h4>Made using <b>{{ project.framework }}</b></h4>
           <p>{{ project.technologies }}</p>
           <div class="text_box">
