@@ -327,7 +327,7 @@ a, a > * {
   max-width: 784px;
   margin: auto;
   grid-template-columns: 1fr;
-  grid-template-rows: $remMedium auto $remMedium;
+  grid-template-rows: $remMedium auto $remLarge;
   height: 100vh;
   grid-gap: $remSmall;
 

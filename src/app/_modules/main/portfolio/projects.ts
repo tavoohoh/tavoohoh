@@ -4,7 +4,7 @@ export const projects: Project[] = [
   {
     title: 'Centro Cultural Chacao',
     category: 'Culture and Arts',
-    layout: 'contain',
+    layout: 'cover',
     color: [
       '#000000',
       '#ffffff',
@@ -49,7 +49,7 @@ export const projects: Project[] = [
     layout: 'two_top',
     color: [
       '#000000',
-      '#ffffff',
+      '#000000',
       '#76d8e1'
     ],
     images: [
@@ -94,8 +94,8 @@ export const projects: Project[] = [
       '#d6e2e1'
     ],
     images: [
-      '/assets/portfolio/2017-07-Yeipii/cover_1.jpg',
-      '/assets/portfolio/2017-07-Yeipii/cover_2.jpg'
+      '/assets/portfolio/2017-07-Yeipii/cover_1.png',
+      '/assets/portfolio/2017-07-Yeipii/cover_2.png'
     ],
     date: new Date(2017, 7),
     framework: 'Angular JS',
@@ -129,14 +129,15 @@ export const projects: Project[] = [
   {
     title: 'Pablo Canelones',
     category: 'Photography',
-    layout: 'contain',
+    layout: 'two_top_over',
     color: [
       '#ffffff',
       '#ffffff',
       '#646f6f'
     ],
     images: [
-      '/assets/portfolio/2018-03-Pablo-Canelones/cover_1.jpg'
+      '/assets/portfolio/2018-03-Pablo-Canelones/cover_1.jpg',
+      '/assets/portfolio/2018-03-Pablo-Canelones/cover_2.jpg'
     ],
     date: new Date(2018, 3),
     framework: 'Wordpress',
@@ -157,7 +158,8 @@ export const projects: Project[] = [
       '#2680c6'
     ],
     images: [
-      '/assets/portfolio/2018-03-Turpial-Dev/cover_1.jpg'
+      '/assets/portfolio/2018-03-Turpial-Dev/cover_1.png',
+      '/assets/portfolio/2018-03-Turpial-Dev/cover_2.png'
     ],
     date: new Date(2018, 3),
     framework: 'Jekyll',
@@ -179,7 +181,8 @@ export const projects: Project[] = [
       '#3a3c42'
     ],
     images: [
-      '/assets/portfolio/2018-06-Exeter/cover_1.jpg'
+      '/assets/portfolio/2018-06-Exeter/cover_1.jpg',
+      '/assets/portfolio/2018-06-Exeter/cover_2.jpg'
     ],
     date: new Date(2018, 6),
     framework: 'Angular 6',
@@ -197,7 +200,7 @@ export const projects: Project[] = [
       '#d6e2e1'
     ],
     images: [
-      '/assets/portfolio/2018-09-El-Farolito/cover_1.jpg'
+      '/assets/portfolio/2018-09-El-Farolito/cover_1.png'
     ],
     date: new Date(2018, 9),
     framework: 'static HTML',
@@ -218,7 +221,8 @@ export const projects: Project[] = [
       '#2680c6'
     ],
     images: [
-      '/assets/portfolio/2018-09-Gridout/cover_1.jpg'
+      '/assets/portfolio/2018-09-Gridout/cover_1.png',
+      '/assets/portfolio/2018-09-Gridout/cover_2.png'
     ],
     date: new Date(2018, 9),
     framework: 'static HTML',
@@ -239,7 +243,7 @@ export const projects: Project[] = [
       '#d6e2e1'
     ],
     images: [
-      '/assets/portfolio/2018-10-Gian-Faraone/cover_1.jpg'
+      '/assets/portfolio/2018-10-Gian-Faraone/cover_1.png'
     ],
     date: new Date(2016, 1),
     framework: 'Wordpress',
@@ -260,7 +264,7 @@ export const projects: Project[] = [
       '#646f6f'
     ],
     images: [
-      '/assets/portfolio/2018-11-Dear-Sinatra/cover_1.jpg'
+      '/assets/portfolio/2018-11-Dear-Sinatra/cover_1.png'
     ],
     date: new Date(2018, 11),
     framework: 'Angular 7',
@@ -281,7 +285,7 @@ export const projects: Project[] = [
       '#2680c6'
     ],
     images: [
-      '/assets/portfolio/2018-12-Espacio/cover_1.jpg'
+      '/assets/portfolio/2018-12-Espacio/cover_1.png'
     ],
     date: new Date(2018, 12),
     framework: 'Django 2',
@@ -302,7 +306,7 @@ export const projects: Project[] = [
       '#8da5a8'
     ],
     images: [
-      '/assets/portfolio/2018-12-Finapp/cover_1.jpg'
+      '/assets/portfolio/2018-12-Finapp/cover_1.png'
     ],
     date: new Date(2018, 12),
     framework: 'Flutter',

@@ -19,11 +19,11 @@
           </span>
         </div>
   
-        <!-- imagen -->
+        <!-- image -->
         <div class="image">
           <div [class]="project.layout">
-            <span [style.background-image]="'url('+ project.images[0] +')'"></span>
-            <span *ngIf="project.images[1]" [style.background-image]="'url('+ project.images[1] +')'"></span>
+            <span class="first" [style.background-image]="'url('+ project.images[0] +')'"></span>
+            <span class="last" *ngIf="project.images[1]" [style.background-image]="'url('+ project.images[1] +')'"></span>
           </div>
         </div>
   
