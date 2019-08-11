@@ -1,6 +1,7 @@
 import { Injectable, ElementRef, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subscription, fromEvent } from 'rxjs';
+import { FirebaseService } from '@app/_services/firebase.service';
 
 import {
   greatings,
@@ -21,7 +22,10 @@ export class ConsoleService implements OnDestroy {
   public emma = false;
   private subscription: Subscription;
 
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router,
+    private firebaseService: FirebaseService
+  ) { }
 
   public async readConsole(bash: ElementRef, command: string) {
     this.command = command;
@@ -89,6 +93,8 @@ export class ConsoleService implements OnDestroy {
             </span>
           </p>
         `);
+        this.saveUnknownCommand(this.command);
+        break;
     }
   }
 
@@ -400,7 +406,18 @@ export class ConsoleService implements OnDestroy {
 
     } else {
       this.write(setResponse(defaults.options));
+      this.saveUnknownCommand(command);
     }
+  }
+
+  private saveUnknownCommand(command: string) {
+    console.log('Sending command');
+
+    this.firebaseService.addUnknownCommand(command).then(res => {
+      console.warn(`Command "${command}" saved to the database:`, res);
+    }, error => {
+      console.error('Unable to perform command save:', error);
+    });
   }
 
   ngOnDestroy() {

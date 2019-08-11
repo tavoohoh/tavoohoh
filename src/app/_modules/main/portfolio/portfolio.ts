@@ -9,7 +9,7 @@ export const portfolio: Project[] = [
       '#ffffff'
     ],
     images: [
-      '/assets/portfolio/2016-01-Centro-Cultural-Chacao/cover_1.jpg'
+      './assets/portfolio/2016-01-Centro-Cultural-Chacao/cover_1.jpg'
     ],
     date: new Date(2016, 1),
     framework: 'Wordpress',
@@ -28,7 +28,7 @@ export const portfolio: Project[] = [
       '#646f6f'
     ],
     images: [
-      '/assets/portfolio/2016-10-Dear-Sinatra/cover_1.jpg'
+      './assets/portfolio/2016-10-Dear-Sinatra/cover_1.jpg'
     ],
     date: new Date(2016, 10),
     framework: 'static HTML.',
@@ -47,8 +47,8 @@ export const portfolio: Project[] = [
       '#646f6f'
     ],
     images: [
-      '/assets/portfolio/2017-03-Skat/cover_1.jpg',
-      '/assets/portfolio/2017-03-Skat/cover_2.jpg'
+      './assets/portfolio/2017-03-Skat/cover_1.jpg',
+      './assets/portfolio/2017-03-Skat/cover_2.jpg'
     ],
     date: new Date(2017, 3),
     framework: 'Django 1.8',
@@ -64,8 +64,8 @@ export const portfolio: Project[] = [
       '#2680c6'
     ],
     images: [
-      '/assets/portfolio/2017-06-Dinbog-App/cover_1.jpg',
-      '/assets/portfolio/2017-06-Dinbog-App/cover_2.jpg'
+      './assets/portfolio/2017-06-Dinbog-App/cover_1.jpg',
+      './assets/portfolio/2017-06-Dinbog-App/cover_2.jpg'
     ],
     date: new Date(2017, 6),
     framework: 'Ionic 3',
@@ -84,8 +84,8 @@ export const portfolio: Project[] = [
       '#d6e2e1'
     ],
     images: [
-      '/assets/portfolio/2017-07-Yeipii/cover_1.png',
-      '/assets/portfolio/2017-07-Yeipii/cover_2.png'
+      './assets/portfolio/2017-07-Yeipii/cover_1.png',
+      './assets/portfolio/2017-07-Yeipii/cover_2.png'
     ],
     date: new Date(2017, 7),
     framework: 'Angular JS',
@@ -105,7 +105,7 @@ export const portfolio: Project[] = [
       '#cccccc'
     ],
     images: [
-      '/assets/portfolio/2017-10-Steam-Energy/cover_1.jpg'
+      './assets/portfolio/2017-10-Steam-Energy/cover_1.jpg'
     ],
     date: new Date(2017, 10),
     framework: 'Angular 4 and Django Rest Framework',
@@ -122,8 +122,8 @@ export const portfolio: Project[] = [
       '#646f6f'
     ],
     images: [
-      '/assets/portfolio/2018-03-Pablo-Canelones/cover_1.jpg',
-      '/assets/portfolio/2018-03-Pablo-Canelones/cover_2.jpg'
+      './assets/portfolio/2018-03-Pablo-Canelones/cover_1.jpg',
+      './assets/portfolio/2018-03-Pablo-Canelones/cover_2.jpg'
     ],
     date: new Date(2018, 3),
     framework: 'Wordpress',
@@ -142,8 +142,8 @@ export const portfolio: Project[] = [
       '#2680c6'
     ],
     images: [
-      '/assets/portfolio/2018-03-Turpial-Dev/cover_1.png',
-      '/assets/portfolio/2018-03-Turpial-Dev/cover_2.png'
+      './assets/portfolio/2018-03-Turpial-Dev/cover_1.png',
+      './assets/portfolio/2018-03-Turpial-Dev/cover_2.png'
     ],
     date: new Date(2018, 3),
     framework: 'Jekyll',
@@ -163,8 +163,8 @@ export const portfolio: Project[] = [
       '#646f6f'
     ],
     images: [
-      '/assets/portfolio/2018-06-Exeter/cover_1.jpg',
-      '/assets/portfolio/2018-06-Exeter/cover_2.jpg'
+      './assets/portfolio/2018-06-Exeter/cover_1.jpg',
+      './assets/portfolio/2018-06-Exeter/cover_2.jpg'
     ],
     date: new Date(2018, 6),
     framework: 'Angular 6',
@@ -180,7 +180,7 @@ export const portfolio: Project[] = [
       '#d6e2e1'
     ],
     images: [
-      '/assets/portfolio/2018-09-El-Farolito/cover_1.png'
+      './assets/portfolio/2018-09-El-Farolito/cover_1.png'
     ],
     date: new Date(2018, 9),
     framework: 'static HTML',
@@ -199,8 +199,8 @@ export const portfolio: Project[] = [
       '#ffffff'
     ],
     images: [
-      '/assets/portfolio/2018-09-Gridout/cover_1.png',
-      '/assets/portfolio/2018-09-Gridout/cover_2.png'
+      './assets/portfolio/2018-09-Gridout/cover_1.png',
+      './assets/portfolio/2018-09-Gridout/cover_2.png'
     ],
     date: new Date(2018, 9),
     framework: 'static HTML',
@@ -219,7 +219,7 @@ export const portfolio: Project[] = [
       '#d6e2e1'
     ],
     images: [
-      '/assets/portfolio/2018-10-Gian-Faraone/cover_1.png'
+      './assets/portfolio/2018-10-Gian-Faraone/cover_1.png'
     ],
     date: new Date(2016, 1),
     framework: 'Wordpress',
@@ -238,7 +238,7 @@ export const portfolio: Project[] = [
       '#646f6f'
     ],
     images: [
-      '/assets/portfolio/2018-11-Dear-Sinatra/cover_1.png'
+      './assets/portfolio/2018-11-Dear-Sinatra/cover_1.png'
     ],
     date: new Date(2018, 11),
     framework: 'Angular 7',
@@ -257,7 +257,7 @@ export const portfolio: Project[] = [
       '#ffffff'
     ],
     images: [
-      '/assets/portfolio/2018-12-Espacio/cover_1.png'
+      './assets/portfolio/2018-12-Espacio/cover_1.png'
     ],
     date: new Date(2018, 12),
     framework: 'Django 2',
@@ -276,7 +276,7 @@ export const portfolio: Project[] = [
       '#8da5a8'
     ],
     images: [
-      '/assets/portfolio/2018-12-Finapp/cover_1.png'
+      './assets/portfolio/2018-12-Finapp/cover_1.png'
     ],
     date: new Date(2018, 12),
     framework: 'Flutter',
@@ -292,7 +292,7 @@ export const portfolio: Project[] = [
       '#3a3c42'
     ],
     images: [
-      '/assets/portfolio/2019-02-Sinpote/cover_1.jpg'
+      './assets/portfolio/2019-02-Sinpote/cover_1.jpg'
     ],
     date: new Date(2019, 2),
     framework: 'Flutter',

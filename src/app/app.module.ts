@@ -11,6 +11,10 @@ import {
 import { TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
+// Firebase
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+
 // https://github.com/t-ho/ngx-ui-loader/wiki/Getting-started
 import { NgxUiLoaderModule } from 'ngx-ui-loader';
 
@@ -32,6 +36,8 @@ import {
   MainService
 } from './_services';
 
+import { environment } from '@environments/environment';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -41,6 +47,8 @@ import {
     AppRoutingModule,
     HttpClientModule,
     TranslateModule.forRoot(),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
     NgxUiLoaderModule,
     SharedModule,
   ],
