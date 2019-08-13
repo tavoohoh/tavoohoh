@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { auth } from 'firebase/app';
 import { AngularFireAuth } from '@angular/fire/auth';
@@ -8,18 +7,13 @@ import { User } from 'firebase';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
-  private currentUserSubject: BehaviorSubject<User>;
-  public currentUser: Observable<User>;
-  private user: User;
+export class EspacioService {
+  user: User;
 
   constructor(
     public afAuth: AngularFireAuth,
     public router: Router
-    ) {
-
-    this.currentUserSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('currentUser')));
-    this.currentUser = this.currentUserSubject.asObservable();
+  ) {
 
     this.afAuth.authState.subscribe(user => {
       if (user) {
@@ -31,11 +25,7 @@ export class AuthService {
     });
   }
 
-  public get currentUserValue(): User {
-    return this.currentUserSubject.value;
-  }
-
-  async login(username: string, password: string) {
+  public login(username: string, password: string) {
     console.log(username, password);
 
     const email = username + '@gmail.com';
@@ -48,7 +38,7 @@ export class AuthService {
       err => {
         console.error('unable to login:', err);
       });
-
+    // const result = await this.afAuth.auth.signInWithEmailAndPassword(email, password);
   }
 
   async logout() {
@@ -56,5 +46,12 @@ export class AuthService {
     localStorage.removeItem('user');
     this.router.navigate(['']);
   }
+
+  get isLoggedIn(): boolean {
+    const user = JSON.parse(localStorage.getItem('user'));
+    return user !== null;
+  }
+
+
 
 }

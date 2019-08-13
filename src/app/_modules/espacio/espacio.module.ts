@@ -8,18 +8,24 @@ import { SharedModule } from '../shared.module';
 // Components
 import { EspacioNavigationComponent } from '@app/_widgets';
 import { LoginComponent } from './login/login.component';
+import { ShuttleComponent } from './shuttle/shuttle.component';
 
 const routes: Routes = [
   {
     path: '',
     component: LoginComponent
   },
+  {
+    path: 'shuttle',
+    component: ShuttleComponent
+  }
 ];
 
 @NgModule({
   declarations: [
     EspacioNavigationComponent,
-    LoginComponent
+    LoginComponent,
+    ShuttleComponent
   ],
   imports: [
     RouterModule.forChild(routes),
