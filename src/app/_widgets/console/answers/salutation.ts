@@ -1,5 +1,5 @@
 export const salutation = {
-  regex: /(hello |hello|hi |hi|hey |hey|whats up |whats up|what's up |what's up|hola |hola)/,
+  regex: /(hello |hello|hi |hi|hey |hey|whats up |whats up|what's up |what's up|hola |hola |hola|que hay|que hay)/,
   options: [
     'Hello human! How are you doing?',
     'Hi I am Emma, what brings you here today?',

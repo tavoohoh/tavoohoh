@@ -411,13 +411,7 @@ export class ConsoleService implements OnDestroy {
   }
 
   private saveUnknownCommand(command: string) {
-    console.log('Sending command');
-
-    this.firebaseService.addUnknownCommand(command).then(res => {
-      console.warn(`Command "${command}" saved to the database:`, res);
-    }, error => {
-      console.error('Unable to perform command save:', error);
-    });
+    this.firebaseService.addUnknownCommand(command);
   }
 
   ngOnDestroy() {
