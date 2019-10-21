@@ -303,4 +303,37 @@ export const portfolio: Project[] = [
       'https://sinpote.com'
     ]
   },
+  {
+    title: 'The Grill Company',
+    category: 'Business administration',
+    layout: 'two_top',
+    color: [
+      '#3a3c42'
+    ],
+    images: [
+      './assets/portfolio/2019-06-The-grill-company/cover_1.png',
+      './assets/portfolio/2019-06-The-grill-company/cover_2.png'
+    ],
+    date: new Date(2019, 6),
+    framework: 'Angular 8',
+    technologies: 'HTML, SCSS, Typescript, Django Rest Framework, Python, Firebase, responsive support',
+    body: 'Tool to manage The Grill Company restaurants with inventory, costs, menu and customer management',
+    link: null
+  },
+  {
+    title: 'Bag2Share',
+    category: 'Luggage renter',
+    layout: 'contain',
+    color: [
+      '#8da5a8'
+    ],
+    images: [
+      './assets/portfolio/2019-12-bag2share/cover_1.png'
+    ],
+    date: new Date(2020, 1),
+    framework: 'Angular 8',
+    technologies: 'HTML, SCSS, Typescript, Django Rest Framework, Python, Firebase, responsive support',
+    body: 'Manage and rent luggages',
+    link: null
+  },
 ];
