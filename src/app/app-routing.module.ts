@@ -12,7 +12,7 @@ const routes: Routes = [
     loadChildren: './_modules/espacio/espacio.module#EspacioModule'
   },
   {
-    path: 'files/GS-CV-2019.pdf', redirectTo: '/files/GS-CV-2019.pdf'
+    path: 'files/tavoohoh.pdf', redirectTo: '/files/tavoohoh.pdf'
   },
 
   { path: '**', redirectTo: '' }
