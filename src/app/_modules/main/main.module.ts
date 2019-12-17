@@ -14,23 +14,26 @@ import {
 } from '@app/_widgets';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
+import { MainComponent } from './main.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
-  },
-  {
-    path: 'portfolio',
-    component: PortfolioComponent
-  },
-  {
-    path: 'about-me',
-    component: AboutMeComponent
-  },
-  {
-    path: 'contact',
-    component: HomeComponent
+    component: MainComponent,
+    children: [
+      {
+        path: '',
+        component: HomeComponent
+      },
+      {
+        path: 'portfolio',
+        component: PortfolioComponent
+      },
+      {
+        path: 'about-me',
+        component: AboutMeComponent
+      }
+    ]
   },
 ];
 
@@ -41,7 +44,8 @@ const routes: Routes = [
     ConsoleComponent,
     HomeComponent,
     AboutMeComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    MainComponent
   ],
   imports: [
     RouterModule.forChild(routes),

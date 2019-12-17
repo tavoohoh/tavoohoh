@@ -1,49 +1,42 @@
-<section class="main_page">
-  <!-- HEADER -->
-  <app-widget-main-header></app-widget-main-header>
+<section class="portfolio">
+  <div *ngFor="let project of portfolio">
+    <div class="project">
+      
+      <div class="content">
+        <span class="subtitle">
+          {{ project.category }}
+        </span>
 
-  <!-- BODY -->
-  <section class="portfolio">
-    <div *ngFor="let project of portfolio">
+        <span class="title">
+          {{ project.title }}
+        </span>
 
-      <div class="portfolio">
-        <!-- title: title, categoria -->
-        <div class="header">
-          <h6 class="category">
-            {{ project.category }}
-          </h6>
-          <h2 class="title">
-            {{ project.title }}
-          </h2>
-          <span class="date">
-            {{ project.date | date:'MMM, y' }}
-          </span>
+        <span class="date">
+          {{ project.date | date:'MMM, y' }}
+        </span>
+
+        <span class="framework">
+          Made using <b>{{ project.framework }}</b>
+        </span>
+
+        <span class="technologies">
+          {{ project.technologies }}
+        </span>
+
+        <div class="description">
+          {{ project.body }}
         </div>
-  
-        <!-- image -->
-        <div class="image" [style.background-image]="'url('+ project.image +')'"></div>
-  
-        <!-- information: -->
-        <div class="body">
-          <h4>Made using <b>{{ project.framework }}</b></h4>
-          <p>{{ project.technologies }}</p>
-          <div class="text_box">
-            {{ project.body }}
+
+        <ng-container *ngIf="project.link">
+          <div class="platform">
+            <a *ngFor="let link of project.link" [href]="link.url" target="_blank" rel="noopener noreferrer">
+              {{ link.name }}
+            </a>
           </div>
-
-          <ng-container *ngIf="project.link">
-            <div class="platform">
-              <a *ngFor="let link of project.link" [href]="link.url" target="_blank" rel="noopener noreferrer">
-                {{ link.name }}
-              </a>
-            </div>
-          </ng-container>
-
-        </div>
+        </ng-container>
       </div>
-    </div>
-  </section>
 
-  <!-- FOOTER -->
-  <app-widget-main-footer></app-widget-main-footer>
+      <div class="image" [style.background-image]="'url('+ project.image +')'"></div>
+    </div>
+  </div>
 </section>

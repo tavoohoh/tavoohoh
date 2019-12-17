@@ -1,6 +1,8 @@
 @import 'variables';
 
 header {
+  position: relative;
+  
   .link {
     @include fontSmall;
     @include elements_trasition;

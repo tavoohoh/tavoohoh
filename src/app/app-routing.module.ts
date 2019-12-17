@@ -5,11 +5,11 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: './_modules/main/main.module#MainModule'
+    loadChildren: () => import(`./_modules/main/main.module`).then(m => m.MainModule)
   },
   {
     path: 'espacio',
-    loadChildren: './_modules/espacio/espacio.module#EspacioModule'
+    loadChildren: () => import(`./_modules/espacio/espacio.module`).then(m => m.EspacioModule)
   },
   {
     path: 'files/tavoohoh.pdf', redirectTo: '/files/tavoohoh.pdf'

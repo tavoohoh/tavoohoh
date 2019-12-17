@@ -1,21 +1,16 @@
 @import 'variables';
 
-$height: calc(100vh - 190px);
+.portfolio {
 
-.portfolio_body {
-  display: grid;
-  grid-gap: $remMedium;
-  padding: 0;
-  margin-top: $remSmall;
-  color: #fff;
+  .project {
 
-  .portfolio {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 82px auto;
-    grid-gap: $remSmall $remMedium;
-    height: $height;
-    padding: $remMedium;
-    border: 2px solid $white;
+    .content {
+
+    }
+
+    .image {
+      
+    }
   }
+
 }
