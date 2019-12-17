@@ -3,8 +3,9 @@
   <app-widget-main-header></app-widget-main-header>
 
   <!-- BODY -->
-  <section class="portfolio_body">
+  <section class="portfolio">
     <div *ngFor="let project of portfolio">
+
       <div class="portfolio">
         <!-- title: title, categoria -->
         <div class="header">
@@ -20,12 +21,7 @@
         </div>
   
         <!-- image -->
-        <div class="image" [style.background-color]="project?.color[0]">
-          <div [class]="project.layout">
-            <span class="first" [style.background-image]="'url('+ project.images[0] +')'"></span>
-            <span class="last" *ngIf="project.images[1]" [style.background-image]="'url('+ project.images[1] +')'"></span>
-          </div>
-        </div>
+        <div class="image" [style.background-image]="'url('+ project.image +')'"></div>
   
         <!-- information: -->
         <div class="body">
@@ -34,12 +30,15 @@
           <div class="text_box">
             {{ project.body }}
           </div>
-          <div class="platform" *ngIf="project.link">
-            <a *ngIf="project.link[1]; else noLink" [href]="project.link[1]" target="_blank" rel="noopener noreferrer">{{ project.link[0] }}</a>
-            <ng-template #noLink>
-              <span>{{ project.link[0] }}</span>
-            </ng-template>
-          </div>
+
+          <ng-container *ngIf="project.link">
+            <div class="platform">
+              <a *ngFor="let link of project.link" [href]="link.url" target="_blank" rel="noopener noreferrer">
+                {{ link.name }}
+              </a>
+            </div>
+          </ng-container>
+
         </div>
       </div>
     </div>

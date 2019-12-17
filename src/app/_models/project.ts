@@ -1,18 +1,21 @@
 import { Injectable } from '@angular/core';
 import { Adapter } from './adapter';
 
+export enum PortfolioLayout {
+  vertical = 'vertical',
+  horizontal = 'horizontal'
+}
+
 export class Project {
   constructor(
     public title: string,
     public category: string,
-    public layout: string,
-    public color: string[], // [0]: backgound, [1]: title, [2]: font
-    public images: string[], // [0]: first image, [2]: second image
+    public image: { url: string, layout: PortfolioLayout },
     public date: Date,
     public framework: string,
     public technologies: string,
     public body: string,
-    public link: string [] // [0]: name, [1]: link
+    public link: Array<{ name: string, url: string, isApp?: boolean }>
   ) {}
 }
 
@@ -22,8 +25,6 @@ export class ProjectAdapter implements Adapter<Project> {
     return new Project(
       item.title,
       item.category,
-      item.layout,
-      item.color,
       item.images,
       item.date,
       item.framework,
