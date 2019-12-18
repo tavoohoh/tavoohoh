@@ -15,6 +15,7 @@ import {
 import { AboutMeComponent } from './about-me/about-me.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { MainComponent } from './main.component';
+import { LibrariesComponent } from './libraries/libraries.component';
 
 const routes: Routes = [
   {
@@ -26,13 +27,17 @@ const routes: Routes = [
         component: HomeComponent
       },
       {
+        path: 'about-me',
+        component: AboutMeComponent
+      },
+      {
         path: 'portfolio',
         component: PortfolioComponent
       },
       {
-        path: 'about-me',
-        component: AboutMeComponent
-      }
+        path: 'libraries',
+        component: LibrariesComponent
+      },
     ]
   },
 ];
@@ -45,7 +50,8 @@ const routes: Routes = [
     HomeComponent,
     AboutMeComponent,
     PortfolioComponent,
-    MainComponent
+    MainComponent,
+    LibrariesComponent
   ],
   imports: [
     RouterModule.forChild(routes),
