@@ -105,9 +105,14 @@ $imageSize: 320px;
       width: $imageSize;
       height: $imageSize;
       border-radius: 2rem;
-
-      background-size: cover;
+      background-position: center;
+      background-size: 100%;
       background-repeat: no-repeat;
+      transition: .3s ease-in-out;
+
+      &:hover {
+        background-size: 110%;
+      }
     }
 
     @media screen and (max-width: $mobile) {
@@ -121,6 +126,10 @@ $imageSize: 320px;
       .image {
         grid-row: 1;
         margin: auto;
+        background-size: cover;
+        &:hover {
+          background-size: cover;
+        }
       }
 
       .content {

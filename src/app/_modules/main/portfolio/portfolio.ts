@@ -5,7 +5,7 @@ export const portfolio: Project[] = [
     title: 'Centro Cultural Chacao',
     category: 'Culture and Arts',
     image: {
-      url: './assets/portfolio/2016-01-Centro-Cultural-Chacao/cover_1.jpg',
+      url: './assets/portfolio/centro-cultural-chacao/cover.jpg',
       layout: PortfolioLayout.horizontal
     },
     date: new Date(2016, 1),
@@ -24,7 +24,7 @@ export const portfolio: Project[] = [
     title: 'Dinbog app',
     category: 'Social Network',
     image: {
-      url: './assets/portfolio/2017-06-Dinbog-App/cover_1.jpg',
+      url: './assets/portfolio/dinbog-app/cover.jpg',
       layout: PortfolioLayout.horizontal
     },
     date: new Date(2017, 6),
@@ -55,7 +55,7 @@ export const portfolio: Project[] = [
     title: 'Yeipii',
     category: 'Payment gateway',
     image: {
-      url: './assets/portfolio/2017-07-Yeipii/cover_1.png',
+      url: './assets/portfolio/yeipii/cover.png',
       layout: PortfolioLayout.horizontal
     },
     date: new Date(2017, 7),
@@ -79,7 +79,7 @@ export const portfolio: Project[] = [
     title: 'Turpial Development',
     category: 'Software factory',
     image: {
-      url: './assets/portfolio/2018-03-Turpial-Dev/cover_1.png',
+      url: './assets/portfolio/turpial-development/cover.jpg',
       layout: PortfolioLayout.horizontal
     },
     date: new Date(2018, 3),
@@ -108,7 +108,7 @@ export const portfolio: Project[] = [
     title: 'Exeter',
     category: 'Hotel administration',
     image: {
-      url: './assets/portfolio/2018-06-Exeter/cover_1.jpg',
+      url: './assets/portfolio/exeter/cover.jpg',
       layout: PortfolioLayout.horizontal
     },
     date: new Date(2018, 6),
@@ -128,7 +128,7 @@ export const portfolio: Project[] = [
     title: 'Gridout',
     category: 'Framework',
     image: {
-      url: './assets/portfolio/2018-09-Gridout/cover_1.png',
+      url: './assets/portfolio/gridout/cover.jpg',
       layout: PortfolioLayout.horizontal
     },
     date: new Date(2018, 9),
@@ -152,7 +152,7 @@ export const portfolio: Project[] = [
     title: 'Gian Faraone',
     category: 'Music',
     image: {
-      url: './assets/portfolio/2018-10-Gian-Faraone/cover_1.png',
+      url: './assets/portfolio/gian-faraone/cover.jpg',
       layout: PortfolioLayout.horizontal
     },
     date: new Date(2016, 1),
@@ -176,7 +176,7 @@ export const portfolio: Project[] = [
     title: 'Dear Sinatra',
     category: 'Music',
     image: {
-      url: './assets/portfolio/2018-11-Dear-Sinatra/cover_1.png',
+      url: './assets/portfolio/dear-sinatra/cover.jpg',
       layout: PortfolioLayout.horizontal
     },
     date: new Date(2018, 11),
@@ -201,7 +201,7 @@ export const portfolio: Project[] = [
     title: 'Espacio',
     category: 'Web administration',
     image: {
-      url: './assets/portfolio/2018-12-Espacio/cover_1.png',
+      url: './assets/portfolio/espacio/cover.jpg',
       layout: PortfolioLayout.horizontal
     },
     date: new Date(2018, 12),
@@ -228,7 +228,7 @@ export const portfolio: Project[] = [
     title: 'Finapp',
     category: 'Financial Administration',
     image: {
-      url: './assets/portfolio/2018-12-Finapp/cover_1.png',
+      url: './assets/portfolio/finapp/cover.jpg',
       layout: PortfolioLayout.horizontal
     },
     date: new Date(2018, 12),
@@ -244,7 +244,7 @@ export const portfolio: Project[] = [
     title: 'Sinpote',
     category: 'E-Commerce',
     image: {
-      url: './assets/portfolio/2019-02-Sinpote/cover_1.jpg',
+      url: './assets/portfolio/sinpote/cover.jpg',
       layout: PortfolioLayout.horizontal
     },
     date: new Date(2019, 2),
@@ -267,7 +267,7 @@ export const portfolio: Project[] = [
     title: 'Pago en tienda',
     category: 'Business administration',
     image: {
-      url: '',
+      url: './assets/portfolio/pago-en-tienda/cover.jpg',
       layout: PortfolioLayout.horizontal
     },
     date: new Date(2019, 9),
