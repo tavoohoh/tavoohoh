@@ -10,14 +10,15 @@ export const portfolio: Project[] = [
     },
     date: new Date(2016, 1),
     framework: 'Wordpress',
-    technologies: 'Photoshop, Illustrator, HTML, CSS, responsive support.',
-    body: 'Website with cultural content, information about concerts, art exhibitions, dance, workshops, blog, news and events calendar.',
-    link: [
-      {
-        name: 'https://centroculturalchacao.com',
-        url: 'centroculturalchacao.com'
-      }
-    ]
+    technologies: [
+      'Photoshop',
+      'Illustrator',
+      'HTML',
+      'CSS',
+      'responsive support'
+    ],
+    body: `Website with cultural content, information about concerts, art exhibitions, dance, workshops, blog,news and
+      events calendar.`
   },
   {
     title: 'Dinbog app',
@@ -28,7 +29,13 @@ export const portfolio: Project[] = [
     },
     date: new Date(2017, 6),
     framework: 'Ionic 3',
-    technologies: 'HTML, SCSS, Typescript, Cordova plugins,Django 1.8 Rest-Framework.',
+    technologies: [
+      'HTML',
+      'SCSS',
+      'Typescript',
+      'Cordova plugins',
+      'Django 1.8 Rest-Framework'
+    ],
     body: `Social platform that allows artists to show their portfolio through multimedia content,
     apply for castings and participate in special events.`,
     link: [
@@ -53,7 +60,12 @@ export const portfolio: Project[] = [
     },
     date: new Date(2017, 7),
     framework: 'Angular JS',
-    technologies: 'HTML, Javascript, CSS, Responsive support.',
+    technologies: [
+      'HTML',
+      'Javascript',
+      'CSS',
+      'Responsive support'
+    ],
     body: `Platform that allows you to manage money,
     add and withdraw it, make transfers to other accounts within the platform, make commercial payments.`,
     link: [
@@ -72,7 +84,17 @@ export const portfolio: Project[] = [
     },
     date: new Date(2018, 3),
     framework: 'Jekyll',
-    technologies: 'HTML, SCSS, Javascript, Jquery, Markdown, Liquid, animation support, responsive support, dynamic content',
+    technologies: [
+      'HTML',
+      'SCSS',
+      'Javascript',
+      'Jquery',
+      'Markdown',
+      'Liquid',
+      'animation support',
+      'responsive support',
+      'dynamic content'
+    ],
     body: `Official website of the company Turpial Development.
     It has several sections: services, portfolio, team, jobs, contact, philosophy and blog.`,
     link: [
@@ -91,7 +113,14 @@ export const portfolio: Project[] = [
     },
     date: new Date(2018, 6),
     framework: 'Angular 6',
-    technologies: 'HTML, SCSS, Typescript, Django Rest Framework, Python, responsive support',
+    technologies: [
+      'HTML',
+      'SCSS',
+      'Typescript',
+      'Django Rest Framework',
+      'Python',
+      'responsive support'
+    ],
     body: 'Tool to manage hotels restaurants with inventory, costs, menu and ingredients management',
     link: null
   },
@@ -104,8 +133,14 @@ export const portfolio: Project[] = [
     },
     date: new Date(2018, 9),
     framework: 'static HTML',
-    technologies: 'CSS grid, HTML, CSS, Javascript',
-    body: 'CSS grid framework for HTML frontend. With layout classes like grid, columns, buttons, fonts, alignment and more',
+    technologies: [
+      'CSS grid',
+      'HTML',
+      'CSS',
+      'Javascript'
+    ],
+    body: `CSS grid framework for HTML frontend. With layout classes like grid, columns, buttons, fonts, alignment and
+      more`,
     link: [
       {
         name: 'gridout.tavoohoh.com',
@@ -122,7 +157,13 @@ export const portfolio: Project[] = [
     },
     date: new Date(2016, 1),
     framework: 'Wordpress',
-    technologies: 'Photoshop, Illustrator, HTML, CSS, responsive support',
+    technologies: [
+      'Photoshop',
+      'Illustrator',
+      'HTML',
+      'CSS',
+      'responsive support'
+    ],
     body: 'Official Gian Faraone website, featuring his music, portfolio, blog, events and news',
     link: [
       {
@@ -140,7 +181,14 @@ export const portfolio: Project[] = [
     },
     date: new Date(2018, 11),
     framework: 'Angular 7',
-    technologies: 'Photoshop, Illustrator, HTML, SCSS, Typescript, responsive support',
+    technologies: [
+      'Photoshop',
+      'Illustrator',
+      'HTML',
+      'SCSS',
+      'Typescript',
+      'responsive support'
+    ],
     body: 'Official Dear Sinatra web page, featuring  its music and social network links',
     link: [
       {
@@ -158,7 +206,16 @@ export const portfolio: Project[] = [
     },
     date: new Date(2018, 12),
     framework: 'Django 2',
-    technologies: 'Django templates, Django Rest-Framework, Python, HTML, Javascript, Jquery, responsive support, email support.',
+    technologies: [
+      'Django templates',
+      'Django Rest-Framework',
+      'Python',
+      'HTML',
+      'Javascript',
+      'Jquery',
+      'responsive support',
+      'email support.'
+    ],
     body: 'Administration tool for e-commerce, blogs, portfolios and small business',
     link: [
       {
@@ -176,9 +233,12 @@ export const portfolio: Project[] = [
     },
     date: new Date(2018, 12),
     framework: 'Flutter',
-    technologies: 'HTML, CSS, Javascript, Jquery, Firebase, Google Sheets API database, responsive support',
-    body: 'Financial administration tool',
-    link: null
+    technologies: [
+      'Flutter',
+      'Dart',
+      'Firebase Real Time Database'
+    ],
+    body: 'Financial administration tool'
   },
   {
     title: 'Sinpote',
@@ -188,8 +248,13 @@ export const portfolio: Project[] = [
       layout: PortfolioLayout.horizontal
     },
     date: new Date(2019, 2),
-    framework: 'Flutter',
-    technologies: 'HTML, SCSS, Typescript, responsive, Interceptors, responsive support',
+    framework: 'Anuglar',
+    technologies: [
+      'HTML',
+      'SCSS',
+      'Typescript',
+      'Django Rest Api'
+    ],
     body: 'Business e-commerce featuring its products, services, cart, checkout and order management too',
     link: [
       {
@@ -207,7 +272,14 @@ export const portfolio: Project[] = [
     },
     date: new Date(2019, 9),
     framework: 'Angular 8',
-    technologies: 'HTML, SCSS, Typescript, Node, Firebase, Docker',
+    technologies: [
+      'HTML',
+      'SCSS',
+      'Typescript',
+      'Node',
+      'Firebase',
+      'Docker'
+    ],
     body: 'Manage your bussines with Rappi Pay',
     link: [
       {

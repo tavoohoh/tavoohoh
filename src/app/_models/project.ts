@@ -13,9 +13,9 @@ export class Project {
     public image: { url: string, layout: PortfolioLayout },
     public date: Date,
     public framework: string,
-    public technologies: string,
+    public technologies: string[],
     public body: string,
-    public link: Array<{ name: string, url: string, isApp?: boolean }>
+    public link?: Array<{ name: string, url: string, isApp?: boolean }>
   ) {}
 }
 

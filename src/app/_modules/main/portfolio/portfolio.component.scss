@@ -1,15 +1,137 @@
 @import 'variables';
 
-.portfolio {
+$imageSize: 320px;
 
+.portfolio {
+  padding: 1rem 0;
+  
   .project {
+    display: grid;
+    grid-template-columns: $imageSize auto;
+    gap: 3rem;
+    margin-bottom: 3rem;
+
+    .content, .image {
+      grid-row: 1;
+    }
 
     .content {
+      grid-column: 2;
+      .subtitle {
+        display: block;
+        font-size: .8rem;
+      }
 
+      .title {
+        display: block;
+        font-size: 1.4rem;
+        font-weight: bold;
+      }
+
+      .date {
+        display: block;
+        font-size: .8rem;
+        letter-spacing: 1px;
+        margin-bottom: 1rem;
+      }
+
+      .description {
+        display: block;
+        font-size: .9rem;
+        margin: .5rem 0;
+      }
+
+      .framework {
+        display: block;
+        margin-bottom: .5rem;
+        // b {
+        //   text-decoration-line: underline;
+        //   text-decoration-style: solid;
+        //   text-decoration-skip-ink: none;
+        //   text-decoration-color: $pink;
+        //   text-decoration-thickness: 16px;
+        //   text-underline-offset: -8px;
+        // }
+
+        b {
+          position: relative;
+          text-shadow: 2px 2px 6px rgba($color: #000, $alpha: .3);
+        }
+        
+        b::before {
+          content: '';
+          background-color: $pink;
+          position: absolute;
+          left: 5px;
+          height: 14px;
+          width: 100%;
+          bottom: -2px;
+          z-index: -1;
+        }
+      }
+
+      .technologies {
+        display: block;
+        padding: 1rem 0;
+        span {
+          font-family: consolas;
+          display: inline-block;
+          font-size: .7rem;
+          letter-spacing: 1px;
+          padding: 4px 5px;
+          background: $blue ;
+          color: #fff;
+          margin-right: 5px;
+          margin-bottom: 5px;
+          line-height: 1;
+        }
+      }
+
+      .platform {
+        font-size: .8rem;
+        a {
+          display: inline-block;
+          margin-right: 1rem;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
     }
 
     .image {
-      
+      grid-column: 1;
+      width: $imageSize;
+      height: $imageSize;
+      border-radius: 2rem;
+
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    @media screen and (max-width: $mobile) {
+      grid-template-columns: auto;
+      gap: 1rem;
+
+      .content, .image {
+        grid-column: 1;
+      }
+
+      .image {
+        grid-row: 1;
+        margin: auto;
+      }
+
+      .content {
+        grid-row: 2;
+      }
+    }
+    
+    @media screen and (max-width: 321px) {
+      .image {
+        width: calc(100vw - 36px);
+      }
     }
   }
 

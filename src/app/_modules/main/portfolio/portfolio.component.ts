@@ -4,7 +4,6 @@ import { Project } from '@app/_models';
 import { NgxUiLoaderService } from 'ngx-ui-loader';
 import { portfolio } from './portfolio';
 
-
 @Component({
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',

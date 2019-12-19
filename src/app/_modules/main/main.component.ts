@@ -5,11 +5,17 @@ import { Component, OnInit } from '@angular/core';
   template: `
   <section class="main_page">
     <!-- HEADER -->
-    <app-widget-main-header></app-widget-main-header>
+    <span>
+      <app-widget-main-header></app-widget-main-header>
+    </span>
     <!-- BODY -->
-    <router-outlet></router-outlet>
+    <span>
+      <router-outlet></router-outlet>
+    </span>
     <!-- FOOTER -->
-    <app-widget-main-footer></app-widget-main-footer>
+    <span>
+      <app-widget-main-footer></app-widget-main-footer>
+    </span>
   </section>
   `,
 })

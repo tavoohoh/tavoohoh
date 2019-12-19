@@ -1,42 +1,46 @@
 <section class="portfolio">
-  <div *ngFor="let project of portfolio">
-    <div class="project">
-      
-      <div class="content">
-        <span class="subtitle">
-          {{ project.category }}
-        </span>
+  <div class="project" *ngFor="let project of portfolio">
+    
+    <div class="content">
+      <span class="subtitle">
+        {{ project.category }}
+      </span>
 
-        <span class="title">
-          {{ project.title }}
-        </span>
+      <span class="title">
+        {{ project.title }}
+      </span>
 
-        <span class="date">
-          {{ project.date | date:'MMM, y' }}
-        </span>
+      <span class="date">
+        {{ project.date | date:'MMM, y' }}
+      </span>
 
-        <span class="framework">
-          Made using <b>{{ project.framework }}</b>
-        </span>
-
-        <span class="technologies">
-          {{ project.technologies }}
-        </span>
-
-        <div class="description">
-          {{ project.body }}
-        </div>
-
-        <ng-container *ngIf="project.link">
-          <div class="platform">
-            <a *ngFor="let link of project.link" [href]="link.url" target="_blank" rel="noopener noreferrer">
-              {{ link.name }}
-            </a>
-          </div>
-        </ng-container>
+      <div class="description">
+        {{ project.body }}
       </div>
 
-      <div class="image" [style.background-image]="'url('+ project.image +')'"></div>
+      <span class="framework">
+        Made using <b>{{ project.framework }}</b>
+      </span>
+
+      <span class="technologies">
+        <span *ngFor="let tech of project.technologies">
+          {{ tech }}
+        </span>
+      </span>
+
+      <ng-container *ngIf="project.link">
+        <div class="platform">
+          <a *ngFor="let link of project.link" [href]="link.url" target="_blank" rel="noopener noreferrer">
+            {{ link.name }}
+          </a>
+        </div>
+      </ng-container>
+    </div>
+
+    <div class="image"
+      [class.l-vertical]="project.image.layout === 'vertical'"
+      [class.l-horizontal]="project.image.layout === 'horizontal'"
+      [style.background-image]="'url('+ project.image.url +')'">
     </div>
   </div>
 </section>
