@@ -29,6 +29,7 @@ export class PortfolioComponent implements OnInit {
   async getPorfolio() {
     this.ngxService.start();
     this.portfolio = await portfolio;
+    this.portfolio = this.portfolio.reverse();
     this.ngxService.stop();
   }
 

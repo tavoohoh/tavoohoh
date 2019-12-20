@@ -55,7 +55,7 @@ export const portfolio: Project[] = [
     title: 'Yeipii',
     category: 'Payment gateway',
     image: {
-      url: './assets/portfolio/yeipii/cover.png',
+      url: './assets/portfolio/yeipii/cover.jpg',
       layout: PortfolioLayout.horizontal
     },
     date: new Date(2017, 7),
@@ -287,5 +287,25 @@ export const portfolio: Project[] = [
         url: 'https://tienda.rappipay.com'
       }
     ]
+  },
+  {
+    title: 'The Grill Company',
+    category: 'Business administration',
+    image: {
+      url: './assets/portfolio/the-grillcompany/cover.jpg',
+      layout: PortfolioLayout.horizontal
+    },
+    date: new Date(2019, 9),
+    framework: 'Angular 8',
+    technologies: [
+      'HTML',
+      'SCSS',
+      'Typescript',
+      'Django Rest Framework',
+      'Python',
+      'Firebase',
+      'responsive support'
+    ],
+    body: 'Tool to manage The Grill Company restaurants with inventory, costs, menu and customer management ',
   }
 ];

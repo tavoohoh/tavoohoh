@@ -111,7 +111,7 @@ $imageSize: 320px;
       transition: .3s ease-in-out;
 
       &:hover {
-        background-size: 110%;
+        background-size: 120%;
       }
     }
 
@@ -133,6 +133,8 @@ $imageSize: 320px;
       }
 
       .content {
+        max-width: $imageSize;
+        margin: auto;
         grid-row: 2;
       }
     }

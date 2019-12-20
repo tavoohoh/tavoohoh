@@ -36,6 +36,7 @@
     @include fontMedium;
     line-height: 1.7;
     text-align: justify;
+    margin-bottom: .5rem;
   }
 
   @media screen and (max-width: $mobile) {
