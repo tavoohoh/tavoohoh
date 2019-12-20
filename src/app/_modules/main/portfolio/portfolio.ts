@@ -38,14 +38,14 @@ export const portfolio: Project[] = [
     ],
     body: `Social platform that allows artists to show their portfolio through multimedia content,
     apply for castings and participate in special events.`,
-    link: [
+    references: [
       {
-        name: 'App Store',
+        text: 'App Store',
         url: 'https://apps.apple.com/us/app/dinbog/id1289437869',
         isApp: true
       },
       {
-        name: 'Play Store',
+        text: 'Play Store',
         url: 'https://play.google.com/store/apps/details?id=com.ionicDinBog.myapp&hl=en#details-reviews',
         isApp: true
       }
@@ -68,9 +68,9 @@ export const portfolio: Project[] = [
     ],
     body: `Platform that allows you to manage money,
     add and withdraw it, make transfers to other accounts within the platform, make commercial payments.`,
-    link: [
+    references: [
       {
-        name: 'yeipii.com',
+        text: 'yeipii.com',
         url: 'https://yeipii.com'
       }
     ]
@@ -97,9 +97,9 @@ export const portfolio: Project[] = [
     ],
     body: `Official website of the company Turpial Development.
     It has several sections: services, portfolio, team, jobs, contact, philosophy and blog.`,
-    link: [
+    references: [
       {
-        name: 'turpialdev.com',
+        text: 'turpialdev.com',
         url: 'https://turpialdev.com'
       }
     ]
@@ -122,31 +122,7 @@ export const portfolio: Project[] = [
       'responsive support'
     ],
     body: 'Tool to manage hotels restaurants with inventory, costs, menu and ingredients management',
-    link: null
-  },
-  {
-    title: 'Gridout',
-    category: 'Framework',
-    image: {
-      url: './assets/portfolio/gridout/cover.jpg',
-      layout: PortfolioLayout.horizontal
-    },
-    date: new Date(2018, 9),
-    framework: 'static HTML',
-    technologies: [
-      'CSS grid',
-      'HTML',
-      'CSS',
-      'Javascript'
-    ],
-    body: `CSS grid framework for HTML frontend. With layout classes like grid, columns, buttons, fonts, alignment and
-      more`,
-    link: [
-      {
-        name: 'gridout.tavoohoh.com',
-        url: 'https://gridout.tavoohoh.com'
-      }
-    ]
+    references: null
   },
   {
     title: 'Gian Faraone',
@@ -165,9 +141,9 @@ export const portfolio: Project[] = [
       'responsive support'
     ],
     body: 'Official Gian Faraone website, featuring his music, portfolio, blog, events and news',
-    link: [
+    references: [
       {
-        name: 'gianfaraone.com',
+        text: 'gianfaraone.com',
         url: 'https://gianfaraone.com'
       }
     ]
@@ -190,9 +166,9 @@ export const portfolio: Project[] = [
       'responsive support'
     ],
     body: 'Official Dear Sinatra web page, featuring  its music and social network links',
-    link: [
+    references: [
       {
-        name: 'dearsinatra.com',
+        text: 'dearsinatra.com',
         url: 'https://dearsinatra.com'
       }
     ]
@@ -217,9 +193,9 @@ export const portfolio: Project[] = [
       'email support.'
     ],
     body: 'Administration tool for e-commerce, blogs, portfolios and small business',
-    link: [
+    references: [
       {
-        name: 'espacio.me',
+        text: 'espacio.me',
         url: 'https://espacio.me'
       }
     ]
@@ -256,9 +232,9 @@ export const portfolio: Project[] = [
       'Django Rest Api'
     ],
     body: 'Business e-commerce featuring its products, services, cart, checkout and order management too',
-    link: [
+    references: [
       {
-        name: 'sinpote.com',
+        text: 'sinpote.com',
         url: 'https://sinpote.com'
       }
     ]
@@ -281,9 +257,9 @@ export const portfolio: Project[] = [
       'Docker'
     ],
     body: 'Manage your bussines with Rappi Pay',
-    link: [
+    references: [
       {
-        name: 'tienda.rappipay.com',
+        text: 'tienda.rappipay.com',
         url: 'https://tienda.rappipay.com'
       }
     ]

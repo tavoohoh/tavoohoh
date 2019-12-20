@@ -31,7 +31,7 @@
       <ng-container *ngIf="project.link">
         <div class="platform">
           <a *ngFor="let link of project.link" [href]="link.url" target="_blank" rel="noopener noreferrer">
-            {{ link.name }}
+            {{ link.text }}
           </a>
         </div>
       </ng-container>
