@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Project } from '@app/_models';
-
 import { NgxUiLoaderService } from 'ngx-ui-loader';
-import { portfolio } from './portfolio';
+
+import { Project } from '@app/_models';
+import { Portfolio } from './portfolio';
 
 @Component({
   selector: 'app-portfolio',
@@ -13,7 +13,7 @@ export class PortfolioComponent implements OnInit {
   portfolio: Project[];
 
   constructor(
-    private ngxService: NgxUiLoaderService
+    public ngxService: NgxUiLoaderService
   ) { }
 
   /**
@@ -26,9 +26,9 @@ export class PortfolioComponent implements OnInit {
   /**
    * Get a list of projects
    */
-  async getPorfolio() {
+  private getPorfolio() {
     this.ngxService.start();
-    this.portfolio = await portfolio;
+    this.portfolio = Portfolio;
     this.portfolio = this.portfolio.reverse();
     this.ngxService.stop();
   }

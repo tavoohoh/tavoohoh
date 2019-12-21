@@ -5,8 +5,8 @@ export interface Project {
   category: string;
   image: Image;
   date: Date;
-  framework: string;
   technologies: string[];
   body: string;
+  framework?: string;
   references?: Array<Link>;
 }

@@ -1,6 +1,6 @@
 import { Project, PortfolioLayout } from '@app/_models';
 
-export const portfolio: Project[] = [
+export const Portfolio: Project[] = [
   {
     title: 'Centro Cultural Chacao',
     category: 'Culture and Arts',
@@ -17,8 +17,8 @@ export const portfolio: Project[] = [
       'CSS',
       'responsive support'
     ],
-    body: `Website with cultural content, information about concerts, art exhibitions, dance, workshops, blog,news and
-      events calendar.`
+    body: `Website with cultural content, information about concerts, art exhibitions, dance, workshops, blog, news and
+    events calendar.`
   },
   {
     title: 'Dinbog app',
@@ -66,8 +66,8 @@ export const portfolio: Project[] = [
       'CSS',
       'Responsive support'
     ],
-    body: `Platform that allows you to manage money,
-    add and withdraw it, make transfers to other accounts within the platform, make commercial payments.`,
+    body: `Platform that allows you to manage money, add and withdraw it, make transfers to other accounts within the
+    platform, make commercial payments.`,
     references: [
       {
         text: 'yeipii.com',
@@ -91,9 +91,8 @@ export const portfolio: Project[] = [
       'Jquery',
       'Markdown',
       'Liquid',
-      'animation support',
-      'responsive support',
-      'dynamic content'
+      'Animations',
+      'responsive support'
     ],
     body: `Official website of the company Turpial Development.
     It has several sections: services, portfolio, team, jobs, contact, philosophy and blog.`,
@@ -121,32 +120,8 @@ export const portfolio: Project[] = [
       'Python',
       'responsive support'
     ],
-    body: 'Tool to manage hotels restaurants with inventory, costs, menu and ingredients management',
+    body: 'Tool to manage hotels restaurants with inventory, costs, menu and ingredients management.',
     references: null
-  },
-  {
-    title: 'Gian Faraone',
-    category: 'Music',
-    image: {
-      url: './assets/portfolio/gian-faraone/cover.jpg',
-      layout: PortfolioLayout.horizontal
-    },
-    date: new Date(2016, 1),
-    framework: 'Wordpress',
-    technologies: [
-      'Photoshop',
-      'Illustrator',
-      'HTML',
-      'CSS',
-      'responsive support'
-    ],
-    body: 'Official Gian Faraone website, featuring his music, portfolio, blog, events and news',
-    references: [
-      {
-        text: 'gianfaraone.com',
-        url: 'https://gianfaraone.com'
-      }
-    ]
   },
   {
     title: 'Dear Sinatra',
@@ -165,7 +140,7 @@ export const portfolio: Project[] = [
       'Typescript',
       'responsive support'
     ],
-    body: 'Official Dear Sinatra web page, featuring  its music and social network links',
+    body: 'Official Dear Sinatra web page, featuring its music and social network links.',
     references: [
       {
         text: 'dearsinatra.com',
@@ -187,12 +162,13 @@ export const portfolio: Project[] = [
       'Django Rest-Framework',
       'Python',
       'HTML',
+      'CSS',
       'Javascript',
       'Jquery',
       'responsive support',
       'email support.'
     ],
-    body: 'Administration tool for e-commerce, blogs, portfolios and small business',
+    body: 'Administration tool for e-commerce, blogs, portfolios and small business.',
     references: [
       {
         text: 'espacio.me',
@@ -214,7 +190,7 @@ export const portfolio: Project[] = [
       'Dart',
       'Firebase Real Time Database'
     ],
-    body: 'Financial administration tool'
+    body: 'Financial administration tool.'
   },
   {
     title: 'Sinpote',
@@ -224,7 +200,7 @@ export const portfolio: Project[] = [
       layout: PortfolioLayout.horizontal
     },
     date: new Date(2019, 2),
-    framework: 'Anuglar',
+    framework: 'Anuglar 7',
     technologies: [
       'HTML',
       'SCSS',
@@ -256,7 +232,7 @@ export const portfolio: Project[] = [
       'Firebase',
       'Docker'
     ],
-    body: 'Manage your bussines with Rappi Pay',
+    body: 'Manage bussines with Rappi Pay.',
     references: [
       {
         text: 'tienda.rappipay.com',
@@ -282,6 +258,31 @@ export const portfolio: Project[] = [
       'Firebase',
       'responsive support'
     ],
-    body: 'Tool to manage The Grill Company restaurants with inventory, costs, menu and customer management ',
-  }
+    body: 'Tool to manage The Grill Company restaurants inventory, prices, menu and customer management.',
+  },
+  {
+    title: 'Gian Faraone',
+    category: 'Music',
+    image: {
+      url: './assets/portfolio/gian-faraone/cover.jpg',
+      layout: PortfolioLayout.horizontal
+    },
+    date: new Date(2019, 11),
+    framework: 'Angular 8',
+    technologies: [
+      'Photoshop',
+      'Illustrator',
+      'HTML',
+      'Typescript',
+      'SCSS',
+      'responsive support'
+    ],
+    body: 'Official Gian Faraone website, featuring his music, portfolio, blog, events and news',
+    references: [
+      {
+        text: 'gianfaraone.com',
+        url: 'https://gianfaraone.com'
+      }
+    ]
+  },
 ];

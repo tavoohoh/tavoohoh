@@ -1,1 +1,39 @@
-<p>libraries works!</p>
+<section class="library">
+  <div class="project" *ngFor="let project of library">
+    <div class="content">
+      <span class="subtitle">
+        {{ project.category }}, 
+        {{ project.date | date:'MMM, y' }}
+      </span>
+
+      <span class="title">
+        {{ project.title }}
+      </span>
+
+      <div class="description">
+        {{ project.body }}
+      </div>
+
+      <span class="technologies">
+        <span *ngFor="let tech of project.technologies">
+          {{ tech }}
+        </span>
+      </span>
+
+      <ng-container *ngIf="project.references">
+        <div class="platform">
+          <a *ngFor="let link of project.references"
+            [href]="link.url"
+            target="_blank"
+            rel="noopener noreferrer">
+            {{ link.text }}
+          </a>
+        </div>
+      </ng-container>
+    </div>
+
+    <div class="image"
+      [style.background-image]="'url('+ project.image.url +')'">
+    </div>  
+  </div>
+</section>

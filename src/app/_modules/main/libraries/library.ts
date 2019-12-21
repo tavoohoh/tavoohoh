@@ -1,6 +1,6 @@
-import { Library, PortfolioLayout } from '@app/_models';
+import { PortfolioLayout, Project } from '@app/_models';
 
-export const portfolio: Library[] = [
+export const Library: Project[] = [
   {
     title: 'Gridout',
     category: 'Framework',
@@ -15,7 +15,7 @@ export const portfolio: Library[] = [
       'CSS'
     ],
     body: `CSS grid framework for HTML frontend. With layout classes like grid, columns, buttons, fonts, alignment and
-    more`,
+    more.`,
     references: [
       {
         text: 'Demo',
@@ -35,7 +35,7 @@ export const portfolio: Library[] = [
       'Angular ^8',
       'Typescript'
     ],
-    body: `Simple music player user interface that easily adapts to any website interface.W`,
+    body: `Simple music player user interface that easily adapts to any website interface.`,
     references: [
       {
         text: 'Demo',
