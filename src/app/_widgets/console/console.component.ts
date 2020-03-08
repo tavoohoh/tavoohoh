@@ -9,7 +9,7 @@ import { Subscription, fromEvent } from 'rxjs';
   styleUrls: ['./console.component.scss']
 })
 export class ConsoleComponent implements OnInit, OnDestroy {
-  public userInput: string;
+  public userInput = '';
   public ngModelOptions = {
     standalone: true
   };
@@ -36,9 +36,9 @@ export class ConsoleComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.subscription = fromEvent(document, 'keydown')
       .subscribe((e: KeyboardEvent) => {
-        const keyCode = e.keyCode;
+        const keyCode = e.code;
 
-        if (keyCode === 9) {
+        if (keyCode === 'Tab' || keyCode === 'Enter' && this.userInput.length === 0) {
           e.returnValue = false;
           e.preventDefault();
         }

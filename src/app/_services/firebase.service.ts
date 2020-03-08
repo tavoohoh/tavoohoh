@@ -9,38 +9,25 @@ import { first } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class FirebaseService {
-  
+
   constructor(
     private db: AngularFirestore,
     private http: HttpClient
   ) { }
 
-
   /**
    * emma: save undefined command
    */
   async addUnknownCommand(command: string) {
-    return new Promise<any>((resolve, reject) => {
-      this.http.get('http://ip-api.com/json')
-        .toPromise()
-        .then(
-          user => { // Success
-            return new Promise<any>((res, rej) => {
-              this.db.collection('emmaUnknown').add({
-                commandLine: command,
-                date: new Date(),
-                country: user['country'],
-                city: user['city']
-              }).then(
-                dat => res(dat),
-                err => rej(err)
-              );
-            });
-          }
-        );
+    return new Promise<any>((res, rej) => {
+      this.db.collection('emmaUnknown').add({
+        commandLine: command,
+        date: new Date()
+      }).then(
+        dat => res(dat),
+        err => rej(err)
+      );
     });
-
-
   }
 
 }

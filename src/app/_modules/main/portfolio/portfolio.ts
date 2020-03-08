@@ -67,7 +67,7 @@ export const Portfolio: Project[] = [
       'Responsive support'
     ],
     body: `Platform that allows you to manage money, add and withdraw it, make transfers to other accounts within the
-    platform, make commercial payments.`,
+    platform, make commercial payments...`,
     references: [
       {
         text: 'yeipii.com',
@@ -92,7 +92,8 @@ export const Portfolio: Project[] = [
       'Markdown',
       'Liquid',
       'Animations',
-      'responsive support'
+      'responsive support',
+      'Gitlab Pages'
     ],
     body: `Official website of the company Turpial Development.
     It has several sections: services, portfolio, team, jobs, contact, philosophy and blog.`,
@@ -104,7 +105,7 @@ export const Portfolio: Project[] = [
     ]
   },
   {
-    title: 'Exeter',
+    title: 'IsHotel',
     category: 'Hotel administration',
     image: {
       url: './assets/portfolio/exeter/cover.jpg',
@@ -113,12 +114,15 @@ export const Portfolio: Project[] = [
     date: new Date(2018, 6),
     framework: 'Angular 6',
     technologies: [
+      'Photoshop',
+      'Illustrator',
       'HTML',
-      'SCSS',
       'Typescript',
-      'Django Rest Framework',
+      'SCSS',
       'Python',
-      'responsive support'
+      'responsive support',
+      'Django Rest Framework',
+      'Firebase hosting'
     ],
     body: 'Tool to manage hotels restaurants with inventory, costs, menu and ingredients management.',
     references: null
@@ -138,7 +142,8 @@ export const Portfolio: Project[] = [
       'HTML',
       'SCSS',
       'Typescript',
-      'responsive support'
+      'responsive support',
+      'Firebase hosting'
     ],
     body: 'Official Dear Sinatra web page, featuring its music and social network links.',
     references: [
@@ -158,15 +163,17 @@ export const Portfolio: Project[] = [
     date: new Date(2018, 12),
     framework: 'Django 2',
     technologies: [
+      'HTML',
+      'Python',
+      'Django',
       'Django templates',
       'Django Rest-Framework',
-      'Python',
-      'HTML',
+      'CPanel',
+      'MySQL',
       'CSS',
       'Javascript',
       'Jquery',
-      'responsive support',
-      'email support.'
+      'responsive support'
     ],
     body: 'Administration tool for e-commerce, blogs, portfolios and small business.',
     references: [
@@ -186,9 +193,10 @@ export const Portfolio: Project[] = [
     date: new Date(2018, 12),
     framework: 'Flutter',
     technologies: [
-      'Flutter',
+      'Photoshop',
       'Dart',
-      'Firebase Real Time Database'
+      'Firebase Real Time Database',
+      'Firebase authentication'
     ],
     body: 'Financial administration tool.'
   },
@@ -202,12 +210,16 @@ export const Portfolio: Project[] = [
     date: new Date(2019, 2),
     framework: 'Anuglar 7',
     technologies: [
+      'Photoshop',
+      'Illustrator',
       'HTML',
       'SCSS',
       'Typescript',
+      'Firebase hosting',
+      'MySQL',
       'Django Rest Api'
     ],
-    body: 'Business e-commerce featuring its products, services, cart, checkout and order management too',
+    body: 'Business e-commerce featuring its products, services, cart, checkout and administrative site',
     references: [
       {
         text: 'sinpote.com',
@@ -228,11 +240,15 @@ export const Portfolio: Project[] = [
       'HTML',
       'SCSS',
       'Typescript',
+      'CI Pipelines',
+      'Docker',
+      'Firabase notifications',
       'Node',
-      'Firebase',
+      'PostgreSQL',
+      'Custom libraries',
       'Docker'
     ],
-    body: 'Manage bussines with Rappi Pay.',
+    body: 'Manage business with Rappi Pay.',
     references: [
       {
         text: 'tienda.rappipay.com',
@@ -250,15 +266,17 @@ export const Portfolio: Project[] = [
     date: new Date(2019, 9),
     framework: 'Angular 8',
     technologies: [
+      'Photoshop',
+      'Illustrator',
       'HTML',
       'SCSS',
       'Typescript',
       'Django Rest Framework',
       'Python',
-      'Firebase',
+      'Firebase hosting',
       'responsive support'
     ],
-    body: 'Tool to manage The Grill Company restaurants inventory, prices, menu and customer management.',
+    body: 'The Grill Company restaurant managing tool for inventory, cashier, checkout and customer management.',
   },
   {
     title: 'Gian Faraone',
@@ -274,10 +292,12 @@ export const Portfolio: Project[] = [
       'Illustrator',
       'HTML',
       'Typescript',
-      'SCSS',
-      'responsive support'
+      'SASS',
+      'responsive support',
+      'Firebase functions',
+      'Firebase firestore'
     ],
-    body: 'Official Gian Faraone website, featuring his music, portfolio, blog, events and news',
+    body: 'Official Gian Faraone website, featuring his music, portfolio, blog, events, news and more',
     references: [
       {
         text: 'gianfaraone.com',

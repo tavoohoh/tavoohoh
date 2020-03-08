@@ -28,6 +28,10 @@ export class ConsoleService implements OnDestroy {
   ) { }
 
   public async readConsole(bash: ElementRef, command: string) {
+    if (!command || command.length === 0) {
+      return;
+    }
+
     this.command = command;
     this.bash = bash;
 
@@ -201,12 +205,13 @@ export class ConsoleService implements OnDestroy {
 
     this.write(`
       <p class="bsh_txt">
-        &nbsp;&nbsp;
         <span class="info">home</span>
+        &nbsp;&nbsp;
+        <span class="info">about me</span>
         &nbsp;&nbsp;
         <span class="info">portfolio</span>
         &nbsp;&nbsp;
-        <span class="info">about me</span>
+        <span class="info">libraries</span>
       </p>
     `);
   }
@@ -222,16 +227,16 @@ export class ConsoleService implements OnDestroy {
         this.nav('');
         break;
 
-      case 'portfolio':
-        this.nav('/files/Gustavo-Santamaria-CV-Codefolio-2019.pdf');
-        break;
-
       case 'about me':
         this.nav('/about-me');
         break;
 
-      case 'contact':
-        this.nav('/contact');
+      case 'portfolio':
+        this.nav('/portfolio');
+        break;
+
+      case 'libraries':
+        this.nav('/libraries');
         break;
 
       default:
@@ -286,10 +291,10 @@ export class ConsoleService implements OnDestroy {
 
     this.subscription = fromEvent(document, 'keypress')
       .subscribe((e: KeyboardEvent) => {
-        const keyCode = e.charCode;
+        const keyCode = e.code;
 
         // To destroy the website
-        if (keyCode === 121 || keyCode === 89) {
+        if (keyCode === 'KeyY') {
           this.ngOnDestroy();
           const body = this.bash.nativeElement.offsetParent;
 
@@ -331,8 +336,12 @@ export class ConsoleService implements OnDestroy {
             }
           }, 4000);
 
+          setTimeout(() => {
+            location.reload();
+          }, 6000);
+
           // To cancel
-        } else if (keyCode === 110 || keyCode === 78) {
+        } else if (keyCode === 'KeyN') {
           this.write(`
             <p class="bsh_txt">
               <span class="warning">

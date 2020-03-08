@@ -13,9 +13,6 @@ const routes: Routes = [
     // loadChildren: () => import(`./_modules/espacio/espacio.module`).then(m => m.EspacioModule)
     loadChildren: './_modules/espacio/espacio.module#EspacioModule'
   },
-  {
-    path: 'files/tavoohoh.pdf', redirectTo: '/files/tavoohoh.pdf'
-  },
 
   { path: '**', redirectTo: '' }
 ];
