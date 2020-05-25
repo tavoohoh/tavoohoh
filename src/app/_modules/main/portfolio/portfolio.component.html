@@ -11,7 +11,7 @@
       </span>
 
       <span class="date">
-        {{ project.date | date:'MMM, y' }}
+        {{ checkDate(project.date) ? (project.date | date:'MMM, y') : project.date }}
       </span>
 
       <div class="description">

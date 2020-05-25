@@ -228,35 +228,6 @@ export const Portfolio: Project[] = [
     ]
   },
   {
-    title: 'Pago en tienda',
-    category: 'Business administration',
-    image: {
-      url: './assets/portfolio/pago-en-tienda/cover.jpg',
-      layout: PortfolioLayout.horizontal
-    },
-    date: new Date(2019, 9),
-    framework: 'Angular 8',
-    technologies: [
-      'HTML',
-      'SCSS',
-      'Typescript',
-      'CI Pipelines',
-      'Docker',
-      'Firabase notifications',
-      'Node',
-      'PostgreSQL',
-      'Custom libraries',
-      'Docker'
-    ],
-    body: 'Manage business with Rappi Pay.',
-    references: [
-      {
-        text: 'tienda.rappipay.com',
-        url: 'https://tienda.rappipay.com'
-      }
-    ]
-  },
-  {
     title: 'The Grill Company',
     category: 'Business administration',
     image: {
@@ -279,14 +250,44 @@ export const Portfolio: Project[] = [
     body: 'The Grill Company restaurant managing tool for inventory, cashier, checkout and customer management.',
   },
   {
+    title: 'Pago en tienda',
+    category: 'Business administration',
+    image: {
+      url: './assets/portfolio/pago-en-tienda/cover.jpg',
+      layout: PortfolioLayout.horizontal
+    },
+    date: 'Work in progress',
+    framework: 'Angular 9',
+    technologies: [
+      'HTML',
+      'SCSS',
+      'Typescript',
+      'CI Pipelines',
+      'Docker',
+      'Firabase notifications',
+      'Node',
+      'PostgreSQL',
+      'Custom libraries',
+      'Docker',
+      'Single SPA (Micro frontend architecture)'
+    ],
+    body: 'Manage business with Rappi Pay.',
+    references: [
+      {
+        text: 'tienda.rappipay.com',
+        url: 'https://tienda.rappipay.com'
+      }
+    ]
+  },
+  {
     title: 'Gian Faraone',
     category: 'Music',
     image: {
       url: './assets/portfolio/gian-faraone/cover.jpg',
       layout: PortfolioLayout.horizontal
     },
-    date: new Date(2019, 11),
-    framework: 'Angular 8',
+    date: new Date(2020, 3),
+    framework: 'Angular 9',
     technologies: [
       'Photoshop',
       'Illustrator',

@@ -1,10 +1,11 @@
 {
   "name": "tavoohoh",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --output-hashing=all",
+    "deploy": "npm run build && firebase deploy",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

@@ -4,7 +4,7 @@ export interface Project {
   title: string;
   category: string;
   image: Image;
-  date: Date;
+  date: Date | string;
   technologies: string[];
   body: string;
   framework?: string;

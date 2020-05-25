@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { NgxUiLoaderService } from 'ngx-ui-loader';
 
-import { Project } from '@app/_models';
+import { Project, PageName } from '@app/_models';
 import { Library } from './library';
+import { MetaDataService } from '@app/_services/metatag.service';
 
 @Component({
   selector: 'app-libraries',
@@ -13,7 +14,8 @@ export class LibrariesComponent implements OnInit {
   library: Project[];
 
   constructor(
-    private ngxService: NgxUiLoaderService
+    private ngxService: NgxUiLoaderService,
+    private metaDataService: MetaDataService
   ) { }
 
   /**
@@ -21,6 +23,7 @@ export class LibrariesComponent implements OnInit {
    */
   ngOnInit() {
     this.getPorfolio();
+    this.metaDataService.setMetaData(PageName.LIBRARIES);
   }
 
   /**
