@@ -8,7 +8,8 @@
     "deploy": "npm run build && firebase deploy",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postinstall": "ngcc"
   },
   "private": true,
   "dependencies": {
@@ -25,7 +26,7 @@
     "@ngx-translate/http-loader": "^4.0.0",
     "compass-mixins": "^0.12.10",
     "firebase": "^8.3.2",
-    "ngx-ui-loader": "^8.0.0",
+    "ngx-ui-loader": "^10.0.0",
     "rxjs": "~6.6.7",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
