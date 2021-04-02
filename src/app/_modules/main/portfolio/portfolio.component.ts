@@ -40,11 +40,7 @@ export class PortfolioComponent implements OnInit {
    * Check if date is valid
    */
   public checkDate(date: Date | string): boolean {
-    if (new Date(date).toString() === 'Invalid Date') {
-      return false;
-    } else {
-      return true;
-    }
+    return new Date(date).toString() !== 'Invalid Date';
   }
 
 }

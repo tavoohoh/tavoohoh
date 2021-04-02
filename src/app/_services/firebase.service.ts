@@ -1,9 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
-import { map, catchError } from 'rxjs/operators';
-import { first } from 'rxjs/operators';
+import {AngularFirestore} from '@angular/fire/firestore';
 
 @Injectable({
   providedIn: 'root'
@@ -11,8 +7,7 @@ import { first } from 'rxjs/operators';
 export class FirebaseService {
 
   constructor(
-    private db: AngularFirestore,
-    private http: HttpClient
+    private db: AngularFirestore
   ) { }
 
   /**

@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { Router } from '@angular/router';
-import { auth } from 'firebase/app';
-import { AngularFireAuth } from '@angular/fire/auth';
-import { User } from 'firebase';
+import firebase from 'firebase';
+import User = firebase.User;
+import {AngularFireAuth} from '@angular/fire/auth';
 
 @Injectable({
   providedIn: 'root'
@@ -40,7 +40,7 @@ export class AuthService {
 
     const email = username + '@gmail.com';
 
-    return this.afAuth.auth.signInWithEmailAndPassword(email, password).then(
+    return this.afAuth.signInWithEmailAndPassword(email, password).then(
       res => {
         console.log(res);
         this.router.navigate(['espacio/shuttle']);
@@ -52,7 +52,7 @@ export class AuthService {
   }
 
   async logout() {
-    await this.afAuth.auth.signOut();
+    await this.afAuth.signOut();
     localStorage.removeItem('user');
     this.router.navigate(['']);
   }

@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "tavoohoh"
+  },
+  "targets": {
+    "tavoohoh": {
+      "hosting": {
+        "tavoohoh": [
+          "tavoohoh"
+        ]
+      }
+    }
   }
 }

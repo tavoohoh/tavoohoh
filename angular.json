@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "bd71fdd9-5a86-4f67-9660-2e2c7f02b4f9"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -125,8 +128,13 @@
               "devServerTarget": "tavoohoh:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "tavoohoh"
 }

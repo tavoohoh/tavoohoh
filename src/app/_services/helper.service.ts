@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -19,10 +19,7 @@ export class HelperService {
   numberOnly(event): boolean {
     const charCode = (event.which) ? event.which : event.keyCode;
 
-    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
-      return false;
-    }
-    return true;
+    return !(charCode > 31 && (charCode < 48 || charCode > 57));
   }
 
   /**
@@ -43,7 +40,6 @@ export class HelperService {
 
   /**
    * Returns a translation value
-   * @param translation translation value as string
    */
   getTranslation(value: string) {
     let translation = '';
