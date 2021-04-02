@@ -1,27 +1,21 @@
-# Tavoohoh
+# Hello there, thank you for checking out my GitHub page.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.0.
+Here you can get my personal projects and those that I can share (most of the projects that I am most proud of are not here).
 
-## Development server
+## I've been coding since 2014
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+I started with Wordpress (HTML and CSS, not PHP) and some JavaScript while working as a graphic designer and studying arts at the Central University of Venezuela.
 
-## Code scaffolding
+Later (2017) I started internships in a technology company, during the first months I learned the basics of Python and deepened my knowledge of JavaScript. In this company I grew a lot as a developer using mainly Angular, Ionic, Jekyll and Django.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## TypeScript is one of my strengths
 
-## Build
+Today I am pretty good at TypeScript frameworks like Angular and NestJs, I've also worked with Flutter, React and Kotlin and in my spare time C# and Java while playing in Unity.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+I have twice implemented Micro Frontends architectures using Single SPA, and I'm used to working with Microservices for the backend, continuous integration for testing and deployments and very basic Kafka for complex flows between various microservices.
 
-## Running unit tests
+Stop by my <a target="_blank" href="https://tavoohoh.com/about-me">website</a> if you want to know a little more about me or leave me an <a target="_blank" href="mailto:hi@tavoohoh.com">email</a> if you want to talk.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Are you a developer?
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Follow me if you like my coding and fell free to fork anything here.
