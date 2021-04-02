@@ -6,12 +6,12 @@ const routes: Routes = [
   {
     path: '',
     // loadChildren: () => import(`./_modules/main/main.module`).then(m => m.MainModule)
-    loadChildren: './_modules/main/main.module#MainModule'
+    loadChildren: () => import('./_modules/main/main.module').then(m => m.MainModule)
   },
   {
     path: 'espacio',
     // loadChildren: () => import(`./_modules/espacio/espacio.module`).then(m => m.EspacioModule)
-    loadChildren: './_modules/espacio/espacio.module#EspacioModule'
+    loadChildren: () => import('./_modules/espacio/espacio.module').then(m => m.EspacioModule)
   },
 
   { path: '**', redirectTo: '' }

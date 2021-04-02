@@ -15,19 +15,9 @@ export class ConsoleComponent implements OnInit, OnDestroy {
   };
   private subscription: Subscription;
 
-  @ViewChild(
-    'bashContent',
-    {
-      static: false
-    }
-  ) bashContent: ElementRef;
+  @ViewChild('bashContent') bashContent: ElementRef;
 
-  @ViewChild(
-    'bInput',
-    {
-      static: false
-    }
-  ) bInput: ElementRef;
+  @ViewChild('bInput') bInput: ElementRef;
 
   constructor(
     private consoleService: ConsoleService
